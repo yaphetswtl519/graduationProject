@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    width: 100%;
+    min-width: 1300px;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        background: transparent;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    .duyi-header {
+        min-width: 1300px;
+        display: block;
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: 16px;
+        z-index: 200;
+        border-bottom: 1px solid transparent;
+        background: #292c36 !important;
+        .duyi-header-box {
+            margin: 0 48px 0 200px;
+            .duyi-logo {
+                display: inline-block;
+                float: left;
+                width: 110px;
+                height: 38px;
+                margin: 18px 20px 7px 0;
+                border: 1px solid #fff;
+            }
+            .duyi-header-right {
+                position: relative;
+                display: inline-block;
+                float: right;
+                height: 70px;
+                margin: 0;
+                z-index: 2;
+                padding-right: 150px;
+                .duyi-header-li-line {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 4px;
+                    width: 94px;
+                    background-color: #f5533d;       
+                    transition: left .3s ease-in-out 0s;    
+                }
+                li:nth-child(1) {
+                    padding-left: 16px;
+                }
+                li:nth-child(2):hover~ .duyi-header-li-line  {
+                    left: 103px;
+                }
+                li:nth-child(3):hover~ .duyi-header-li-line {
+                    left: 222px;
+                }
+                li:nth-child(4):hover~ .duyi-header-li-line {
+                    left: 325px;
+                }
+                .duyi-header-li {
+                    position: relative;
+                    float: left;
+                    z-index: 2;
+                    margin-right: 25px;
+                    line-height: 70px;
+                    white-space: nowrap;
+                    a {
+                        height: 100%;
+                        position: relative;
+                        display: inline-block;
+                        padding: 0 15px;
+                        color: #fff;
+                        cursor: pointer;
+                        span {
+                            font-size: 16px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .duyi-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-width: 1300px;
+        background-color: #2e3037;
+        height: 417px;
+        .duyi-main-footer {     
+            padding-top: 60px;
+            padding-bottom: 80px;
+            color: #fff;
+            @media (max-width: 992px) {
+                .duyi-footer-categories {
+                    display: none;
+                }
+                .duyi-footer-intro {
+                    text-align: center;
+                }
+                .duyi-footer {
+                    height: 437px;
+                }
+            }
+            .duyi-footer-intro {
+                padding-bottom: 20px;
+                p {
+                    white-space: normal;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                }
+            }
+            .duyi-footer-categories {
+                padding-left: 100px;
+                ul {
+                    display: block;
+                    margin-top: 20px;
+                    li {
+                        display: block;
+                        height: 20px;
+                        line-height: 20px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .duyi-footer-qrcode {
+                padding-left: 100px;
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border: 1px solid black
+                }
+                p {
+                    margin-top: 20px;
+                } 
+            }
+        }
+        .duyi-copyright {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-top: 1px solid #393b41;
+            font-size: 12px;
+            color: #fff;
+            background-color: #292c36;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .aaa {
+        // padding-bottom: 437px;
+        // height: 2000px;
+        width: 100%;
+        // padding-bottom: 437px;
+    }
+}

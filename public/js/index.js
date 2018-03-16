@@ -1,5 +1,6 @@
-import {a} from './a.js';
-console.log(a);
-console.log(2222);
-console.log(333);
-console.log(444);
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+import '../css/index.less';
+import 'jquery';
+
+console.log($);

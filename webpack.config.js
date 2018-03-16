@@ -10,8 +10,13 @@ module.exports = {
         path: path.resolve(process.cwd(), 'build/'),
         filename: '[name].js'
     },
-    plugins: [
-        new ExtractTextPlugin('[name].css')
+    plugins:[
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
+        // new ExtractTextPlugin('index.css')
     ],
     module: {
         loaders: [
@@ -29,11 +34,12 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract('css-loader','less-loader')
+                // loader: ExtractTextPlugin.extract(['css-loader', 'less-loader'])
+                loader: 'style-loader!css-loader!less-loader'
             },
             {
-                test: /.(jpg|png|gif|svg)$/,
-                loader: 'url-loader?limit=8192&name=./[name].[ext]'
+                test: /.(jpg|png|gif|svg|woff|eot|ttf|woff2)$/,
+                loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
             }
         ]
     },
