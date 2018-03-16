@@ -1,4 +1,52 @@
 extends layout
 
 block content
-  
+  .duyi-content
+    #duyi-carousel.carousel.slide(data-ride="carousel")
+      ol.carousel-indicators
+        li(data-slide-to="0" data-traget="#duyi-carousel" class="active")
+        li(data-slide-to="1")
+        li(data-slide-to="2")
+      .carousel-inner
+        .item.active
+          .duyi-carousel-img
+        .item
+          .duyi-carousel-img
+        .item
+          .duyi-carousel-img
+      a.carousel-control.duyi-carousel-left(href="#duyi-carousel" data-slide="prev")
+      a.carousel-control.duyi-carousel-right(href="#duyi-carousel" data-slide="next")
+    
+    section.duyi-student-show
+      .duyi-student-title.container
+        h2 优秀学员俱乐部
+        span
+        h3 25w--45w年薪
+      .duyi-student-photo.container
+        each student, index in studentInfo
+          if index % 4 === 0
+            .row.duyi-student-photo-row
+              each count in [0, 1, 2, 3]
+                .duyi-student-photo-img.col-md-3.col-sm-6.col-xs-12
+                  img(src=`${studentInfo[index+count].imgUrl}`)
+
+    section.duyi-tencent
+      .container
+        .row
+          .duyi-tencent-certification.col-md-6
+            .duyi-tencent-title
+              p.duyi-tencent-w 腾讯平台
+                span 认证
+              p.duyi-tencent-au
+                span AUTHENTICATION
+            .duyi-tencent-detail
+              p 渡一科技教育公司成立于2007年，后经几轮兼并收购，成立渡一信息技术开发有限公司，下设渡一教育品牌。公司核心业务包含科技类外包，IT教育培训等业务。
+              p 企业开展教育业务至今已有7年整，市场辐射已达整个哈尔滨市，是国内首家开设专业web前端培训的机构。
+          .duyi-tencent-photo.col-md-6
+            img(src="")
+            
+          
+
+            
+
+        

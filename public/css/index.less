@@ -6,6 +6,7 @@ body {
     background-color: #fff;
     width: 100%;
     min-width: 1300px;
+    height: 100%;
     ul {
         margin: 0;
         padding: 0;
@@ -22,14 +23,29 @@ body {
     a:hover {
         text-decoration: none;
     }
+    @media (max-width: 1200px) {
+        .duyi-footer {
+            height: 572px!important;
+            margin-top: -572px;
+        }
+    }
+    @media (max-width: 992px) {
+        .duyi-footer {
+            height: 572px!important;
+            margin-top: -572px!important;
+        }
+        .duyi-content {
+            padding-bottom: 572px!important;
+        }
+        .duyi-main-footer {
+            padding-bottom: 102px!important;
+        }
+    }
     .duyi-header {
         min-width: 1300px;
         display: block;
         width: 100%;
-        height: 70px;
-        position: absolute;
-        left: 0;
-        right: 0;
+        height: 110px;
         font-size: 16px;
         z-index: 200;
         border-bottom: 1px solid transparent;
@@ -37,28 +53,30 @@ body {
         .duyi-header-box {
             margin: 0 48px 0 200px;
             .duyi-logo {
+                background-image: url(../images/logo.png);
+                background-repeat: no-repeat;
                 display: inline-block;
                 float: left;
-                width: 110px;
-                height: 38px;
-                margin: 18px 20px 7px 0;
-                border: 1px solid #fff;
+                width: 38px;
+                height: 42px;
+                margin-top: 48px;
             }
             .duyi-header-right {
                 position: relative;
                 display: inline-block;
                 float: right;
-                height: 70px;
+                height: 110px;
                 margin: 0;
                 z-index: 2;
                 padding-right: 150px;
+                padding-top: 11px;
                 .duyi-header-li-line {
                     position: absolute;
                     left: 0;
                     bottom: 0;
                     height: 4px;
                     width: 94px;
-                    background-color: #f5533d;       
+                    background-color: #fff;       
                     transition: left .3s ease-in-out 0s;    
                 }
                 li:nth-child(1) {
@@ -78,7 +96,7 @@ body {
                     float: left;
                     z-index: 2;
                     margin-right: 25px;
-                    line-height: 70px;
+                    line-height: 110px;
                     white-space: nowrap;
                     a {
                         height: 100%;
@@ -97,15 +115,14 @@ body {
         }
     }
     .duyi-footer {
-        position: absolute;
-        bottom: 0;
+        margin-top: -563px;
         width: 100%;
         min-width: 1300px;
         background-color: #2e3037;
-        height: 417px;
+        height: 563px;
         .duyi-main-footer {     
-            padding-top: 60px;
-            padding-bottom: 80px;
+            padding-top: 142px;
+            padding-bottom: 205px;
             color: #fff;
             @media (max-width: 992px) {
                 .duyi-footer-categories {
@@ -120,30 +137,39 @@ body {
             }
             .duyi-footer-intro {
                 padding-bottom: 20px;
+                font-size: 14px;
                 p {
                     white-space: normal;
                     word-wrap: break-word;
                     word-break: break-all;
                 }
+                p:nth-child(1) {
+                    padding-bottom: 10px;
+                }
+                p:nth-child(2) {
+                    line-height: 22px;
+                }
             }
             .duyi-footer-categories {
-                padding-left: 100px;
+                padding-left: 80px;
+                p {
+                    font-size: 16px;
+                }
                 ul {
-                    display: block;
-                    margin-top: 20px;
                     li {
+                        font-size: 16px;
                         display: block;
-                        height: 20px;
-                        line-height: 20px;
-                        margin-bottom: 15px;
+                        height: 36px;
+                        line-height: 36px;
+                        // margin-bottom: 15px;
                     }
                 }
             }
             .duyi-footer-qrcode {
-                padding-left: 100px;
+                padding-left: 60px;
                 img {
-                    width: 120px;
-                    height: 120px;
+                    width: 140px;
+                    height: 140px;
                     border: 1px solid black
                 }
                 p {
@@ -152,10 +178,9 @@ body {
             }
         }
         .duyi-copyright {
-            height: 60px;
-            line-height: 60px;
+            height: 82px;
+            line-height: 82px;
             text-align: center;
-            border-top: 1px solid #393b41;
             font-size: 12px;
             color: #fff;
             background-color: #292c36;
@@ -164,10 +189,170 @@ body {
             }
         }
     }
-    .aaa {
-        // padding-bottom: 437px;
-        // height: 2000px;
-        width: 100%;
-        // padding-bottom: 437px;
+    .duyi-content {
+        padding-bottom: 563px;
+        #duyi-carousel {
+            margin-bottom: 60px;
+            .carousel-indicators {
+                li {
+                    margin-right: 40px;
+                    background-color: #fff;
+                }
+                li:nth-child(3) {
+                    margin-right: 0;
+                }
+                .active {
+                    background-color: yellow;
+                }
+            }
+            .carousel-inner {
+                .item {
+                    height: 790px;
+                    .duyi-carousel-img {
+                        width: 100%;
+                        height: 790px;
+                        background: url(../images/banner.png) no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+            .duyi-carousel-left, .duyi-carousel-right {
+                width: 17px;
+                height: 31px;
+                position: absolute;
+                top: 46%;
+                margin-top: -20px;
+                cursor: pointer;
+                // background: url(../i) no-repeat;
+            }
+            .duyi-carousel-left {
+                left: 42px;
+                background: url(../images/left.png) no-repeat;
+                // background-position: -140px 50px;
+            }
+            .duyi-carousel-right {
+                right: 42px;
+                left: auto;
+                background: url(../images/right.png) no-repeat;
+                // background-position: -19px 50px;
+            }
+        }
+        .duyi-student-show {
+            margin-bottom: 90px;
+            .duyi-student-title {
+                margin-bottom: 20px;
+                text-align: center;
+                h2 {
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: #232323;
+                }
+                span {
+                    display: block;
+                    margin: 20px auto 0;
+                    width: 20px;
+                    height: 2px;
+                    background: burlywood;
+                }
+                h3 {
+                    font-size: 24px;
+                    color: #232323;
+                }
+            }
+            .duyi-student-photo {
+                padding-left: 6px;
+                img {
+                    width: 100%;
+                    height: 200%;
+                }
+                .duyi-student-photo-row {
+                    margin-bottom: 11px;
+                    .duyi-student-photo-img {
+                        padding-left: 11px;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        .duyi-tencent {
+            background-color: #292c36;
+            padding-top: 322px;
+            padding-bottom: 180px;
+            margin-bottom: 124px;
+            .duyi-tencent-certification {
+                background-image: url(../images/certification.png);
+                background-repeat: no-repeat;
+                background-position: 250px 0;
+                color: #fffefe;
+                .duyi-tencent-title {           
+                    // padding-left: 371px;
+                    margin-bottom: 50px;
+                    .duyi-tencent-w {
+                        padding-top: 40px;
+                        font-size: 72px;
+                        font-weight: bold;
+                        span {
+                            font-size: 72px;
+                            color: yellow;
+                        }
+                    }
+                    .duyi-tencent-au {
+                        position: relative;
+                        font-size: 20px;
+                        height: 65px;
+                        span {
+                            position: absolute;
+                            display: inline-block;
+                            left: 300px;
+                        }
+                    } 
+                }
+                .duyi-tencent-detail {
+                    font-size: 17px;
+                    line-height: 30px;
+                }
+            }
+            @media (max-width: 1200px) {
+                .duyi-tencent-certification {
+                    width: 100%;
+                    text-align: center;
+                    background-position: 500px 0;
+                    .duyi-tencent-au {
+                        span {
+                            left: 550px!important;
+                        }
+                    }
+                }
+                .duyi-tencent-photo {
+                    margin-top: 20px!important;
+                }
+            }
+            @media (max-width: 990px) {
+                .duyi-tencent-certification {
+                    background-position: 400px 0;
+                    .duyi-tencent-au {
+                        span {
+                            left: 440px!important;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                .duyi-tencent-certification {
+                    background-position: 650px 0;
+                    .duyi-tencent-au {
+                        span {
+                            left: 710px!important;
+                        }
+                    }
+                }
+            }
+            .duyi-tencent-photo {
+                margin-top: -132px;
+                width: 550px;
+                height: 688px;
+                border: 1px solid black;
+            }
+        }
     }
 }

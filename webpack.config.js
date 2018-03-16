@@ -34,12 +34,11 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                // loader: ExtractTextPlugin.extract(['css-loader', 'less-loader'])
                 loader: 'style-loader!css-loader!less-loader'
             },
             {
                 test: /.(jpg|png|gif|svg|woff|eot|ttf|woff2)$/,
-                loader: 'url-loader?limit=8192&name=./img/[name].[ext]'
+                loader: 'url-loader?limit=8192&name=./iamges/[name].[ext]'
             }
         ]
     },
