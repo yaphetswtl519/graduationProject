@@ -41,15 +41,28 @@ body {
             padding-bottom: 102px!important;
         }
     }
+    @media (max-width: 1150px) {
+        .duyi-header {
+            position: absolute!important;
+        }
+        .duyi-header-button {
+            display: none;
+        }
+    }
     .duyi-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         min-width: 1300px;
         display: block;
         width: 100%;
         height: 110px;
         font-size: 16px;
-        z-index: 200;
+        z-index: 999;
         border-bottom: 1px solid transparent;
         background: #292c36 !important;
+        transition: all .8s;
         .duyi-header-box {
             margin: 0 48px 0 200px;
             .duyi-logo {
@@ -76,8 +89,14 @@ body {
                     bottom: 0;
                     height: 4px;
                     width: 94px;
-                    background-color: #fff;       
-                    transition: left .3s ease-in-out 0s;    
+                    background-color: #fff;
+                    transition: left .3s ease-in-out 0s, visibility .1s;    
+                }
+                .duyi-header-li-line-show {
+                    visibility: visible;
+                }
+                .duyi-header-li-line-hide {
+                    visibility: hidden;
                 }
                 li:nth-child(1) {
                     padding-left: 16px;
@@ -98,6 +117,7 @@ body {
                     margin-right: 25px;
                     line-height: 110px;
                     white-space: nowrap;
+                    transition: opacity .45s,transfrom .45s,visibility .45s, -webkit-transform .45s;
                     a {
                         height: 100%;
                         position: relative;
@@ -111,6 +131,82 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+    .duyi-header-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    .duyi-header-hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .duyi-header-button {
+        visibility: hidden;
+        position: fixed;
+        top: 35px;
+        right: 35px;
+        width: 60px;
+        height: 60px;
+        z-index: 999;
+        padding: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 8px 20px 2px rgba(0,0,0,.15);
+        border: 0;
+        text-shadow: none;
+        outline: none;
+        transform: translate3d(-1050%, 0, 0) rotate(90deg);
+        opacity: 0;
+        cursor: pointer;
+        .duyi-header-button-midline {
+            position: relative;
+            width: 22px;
+            height: 18px;
+            span {
+                display: block;
+                position: absolute;
+                right: 0;
+                left: 0;
+                height: 2px;
+                transition: all .15s;
+                background-color: #1e2b31;
+            }
+            span:first-of-type {
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+            }
+            span:nth-of-type(2) {
+                top: 0;
+                transform: translateZ(0) rotate(0) scaleX(1);
+            }
+            span:nth-of-type(3) {
+                bottom: 0;
+                transform: translateZ(0) rotate(0) scaleX(1);
+            }
+        }
+    }
+    .duyi-header-button-toggle-transition {
+        transition: all .45s;
+    }
+    .duyi-header-button-toggle-show {
+        opacity: 1 !important;
+        transform: translateX(0) rotate(0) !important;
+        visibility: visible !important;
+    }
+    .duyi-header-button-toggle-hide {
+        opacity: 0!important;
+        visibility: hidden!important;
+        transform: translate3d(-1050%, 0, 0) rotate(90deg)!important;
+    }
+    .duyi-header-button:hover {
+        .duyi-header-button-midline {
+            span:nth-of-type(3) {
+                transform: translate3d(-7px, -4px, 0) rotate(45deg) scaleX(.6);
+            }
+            span:nth-of-type(2) {
+                transform: translate3d(-7px, 4px, 0) rotate(-45deg) scaleX(.5);
             }
         }
     }
@@ -260,14 +356,25 @@ body {
                 }
             }
             .duyi-student-photo {
+                position: relative;
                 padding-left: 6px;
                 img {
                     width: 100%;
                     height: 200%;
                 }
+                .duyi-student-photo-hide {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    width: 200px;
+                    height: 200px;
+                }
                 .duyi-student-photo-row {
-                    margin-bottom: 11px;
+                    // margin-bottom: 11px;
                     .duyi-student-photo-img {
+                        margin-bottom: 11px;
                         padding-left: 11px;
                         padding-right: 0;
                     }
@@ -352,6 +459,154 @@ body {
                 width: 550px;
                 height: 688px;
                 border: 1px solid black;
+            }
+        }
+        .duyi-teacher {
+            margin-bottom: 146px;
+            .duyi-teacher-title {
+                text-align: center;
+                p {
+                    color: #242424;
+                }
+                p:nth-child(1) {
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+                p:nth-child(3) {
+                    font-size: 24px;
+                }
+                span {
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    margin: 0 auto 19px;
+                    background-color: burlywood;
+                }
+            }
+            .duyi-teacher-detail {
+                margin: 120px auto 0;
+                padding: 0;
+                width: 76.384vw;
+                position: relative;
+                .duyi-teacher-wrapper {
+                    vertical-align: middle;
+                    padding: 0 4.1664vw 11.1104vw;
+                    width: 50%;
+                    box-sizing: border-box;
+                    float: left;
+                    .duyi-teacher-box {
+                        cursor: pointer;
+                        .duyi-teacher-photo {
+                            position: relative;
+                            overflow: visible;
+                            margin-top: 2.0832vw;
+                            position: relative;
+                            width: 100%;
+                            span {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                left: 2.0832vw;
+                                top: -2.0832vw;
+                                width: 86%;
+                                height: 100%;
+                                border: 3px solid currentColor;
+                                box-sizing: border-box;
+                                z-index: 3;
+                                transform: translateZ(0);
+                            }
+                            img {
+                                width: 100%;
+                                transition: none;
+                            }
+                        }
+                        .duyi-teacher-info {
+                            position: relative;
+                            padding-left: 2.0832vw;
+                            margin-top: 3.05536vw;
+                            transform: translateZ(0);
+                            p:nth-child(1) {
+                                font-size: 36px;
+                                color: #242424;
+                                letter-spacing: .1em;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                span {
+                                    font-size: 20px;
+                                    margin-left: 20px;
+                                }
+                            }
+                            p:nth-child(2) {
+                                font-size: 18px;
+                                line-height: 1.35;
+                            }
+                        }
+                        .duyi-teacher-info:before,
+                        .duyi-teacher-info:after {
+                            content: "";
+                            width: 1px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            display: block;
+                            height: 100%;
+                        }
+                        .duyi-teacher-info::before {
+                            background: #d9d7da;                            
+                        }
+                        .duyi-teacher-info:after {
+                            background: #000;
+                            transform: scale3d(0,0,1) translateZ(0);
+                            transition: transform .51s ease;
+                            transform-origin: top center;
+                        }
+                    }
+                    .duyi-teacher-box:hover {
+                        .duyi-teacher-info:after {
+                            transform: scaleX(1) translateZ(0);
+                        }
+                    }
+                }
+            }
+            .duyi-teacher-detail:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+        }
+        .duyi-cooperation {
+            margin-bottom: 120px;
+            .duyi-cooperation-title {
+                text-align: center;
+                p:nth-child(1) {
+                    font-size: 46px;
+                    font-weight: bold;
+                    color: #000;
+                }
+                p:nth-child(2) {
+                    margin-top: 12px;
+                    font-size: 30px;
+                    color: #131313;
+                }
+            }
+            .duyi-cooperation-detail {
+                .duyi-cooperation-detail-row {
+                    border-bottom: 1px solid black;
+                    div:nth-child(4) {
+                        border-right: 0;
+                    }
+                    .duyi-cooperation-detail-img {
+                        padding: 10px;
+                        border-right: 1px solid black;
+                        img {
+                            width: 100%;
+                            height: 118px;
+                        }
+                    }
+                }
+                div:nth-child(3) {
+                    border-bottom: 0; 
+                }
             }
         }
     }
