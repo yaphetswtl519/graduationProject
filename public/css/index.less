@@ -1,613 +1,645 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1.5;
-    background-color: #fff;
-    width: 100%;
-    min-width: 1300px;
-    height: 100%;
-    ul {
+html {
+    body {
         margin: 0;
         padding: 0;
-    }
-    li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-        background: transparent;
-    }
-    a:hover {
-        text-decoration: none;
-    }
-    @media (max-width: 1200px) {
-        .duyi-footer {
-            height: 572px!important;
-            margin-top: -572px;
+        font-size: 14px;
+        line-height: 1.5;
+        background-color: #fff;
+        width: 100%;
+        min-width: 1300px;
+        height: 100%;
+        ul {
+            margin: 0;
+            padding: 0;
         }
-    }
-    @media (max-width: 992px) {
-        .duyi-footer {
-            height: 572px!important;
-            margin-top: -572px!important;
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
-        .duyi-content {
-            padding-bottom: 572px!important;
+        a {
+            text-decoration: none;
+            background: transparent;
         }
-        .duyi-main-footer {
-            padding-bottom: 102px!important;
+        a:hover {
+            text-decoration: none;
         }
-    }
-    @media (max-width: 1150px) {
+        @font-face {
+            font-family: 'PingFang';
+            src: url('../font/PingFang Regular.ttf');
+        }
+        @media (max-width: 1200px) {
+            .duyi-footer {
+                height: 572px!important;
+                margin-top: -572px;
+            }
+        }
+        @media (max-width: 992px) {
+            .duyi-footer {
+                height: 572px!important;
+                margin-top: -572px!important;
+            }
+            .duyi-content {
+                padding-bottom: 572px!important;
+            }
+            .duyi-main-footer {
+                padding-bottom: 102px!important;
+            }
+        }
+        @media (max-width: 1150px) {
+            .duyi-header {
+                position: absolute!important;
+            }
+            .duyi-header-button {
+                display: none;
+            }
+        }
         .duyi-header {
-            position: absolute!important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            min-width: 1300px;
+            display: block;
+            width: 100%;
+            height: 110px;
+            font-size: 16px;
+            z-index: 999;
+            border-bottom: 1px solid transparent;
+            background: #292c36 !important;
+            transition: all .8s;
+            .duyi-header-box {
+                margin: 0 48px 0 200px;
+                .duyi-logo {
+                    background: url(../images/logo.png) no-repeat;
+                    display: inline-block;
+                    float: left;
+                    width: 38px;
+                    height: 42px;
+                    margin-top: 48px;
+                }
+                .duyi-header-right {
+                    position: relative;
+                    display: inline-block;
+                    float: right;
+                    height: 110px;
+                    margin: 0;
+                    z-index: 2;
+                    padding-right: 150px;
+                    padding-top: 11px;
+                    .duyi-header-li-line {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 4px;
+                        width: 94px;
+                        background-color: #fff;
+                        transition: left .3s ease-in-out 0s, visibility .1s;    
+                    }
+                    .duyi-header-li-line-show {
+                        visibility: visible;
+                    }
+                    .duyi-header-li-line-hide {
+                        visibility: hidden;
+                    }
+                    li:nth-child(1) {
+                        padding-left: 16px;
+                    }
+                    li:nth-child(2):hover~ .duyi-header-li-line  {
+                        left: 103px;
+                    }
+                    li:nth-child(3):hover~ .duyi-header-li-line {
+                        left: 222px;
+                    }
+                    li:nth-child(4):hover~ .duyi-header-li-line {
+                        left: 325px;
+                    }
+                    .duyi-header-li {
+                        position: relative;
+                        float: left;
+                        z-index: 2;
+                        margin-right: 25px;
+                        line-height: 110px;
+                        white-space: nowrap;
+                        transition: opacity .45s,transfrom .45s,visibility .45s, -webkit-transform .45s;
+                        a {
+                            height: 100%;
+                            position: relative;
+                            display: inline-block;
+                            padding: 0 15px;
+                            color: #fff;
+                            cursor: pointer;
+                            span {
+                                font-size: 16px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .duyi-header-box::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+        .duyi-header-show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .duyi-header-hide {
+            opacity: 0;
+            visibility: hidden;
         }
         .duyi-header-button {
-            display: none;
-        }
-    }
-    .duyi-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        min-width: 1300px;
-        display: block;
-        width: 100%;
-        height: 110px;
-        font-size: 16px;
-        z-index: 999;
-        border-bottom: 1px solid transparent;
-        background: #292c36 !important;
-        transition: all .8s;
-        .duyi-header-box {
-            margin: 0 48px 0 200px;
-            .duyi-logo {
-                background-image: url(../images/logo.png);
-                background-repeat: no-repeat;
-                display: inline-block;
-                float: left;
-                width: 38px;
-                height: 42px;
-                margin-top: 48px;
-            }
-            .duyi-header-right {
+            visibility: hidden;
+            position: fixed;
+            top: 35px;
+            right: 35px;
+            width: 60px;
+            height: 60px;
+            z-index: 999;
+            padding: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 8px 20px 2px rgba(0,0,0,.15);
+            border: 0;
+            text-shadow: none;
+            outline: none;
+            transform: translate3d(-1050%, 0, 0) rotate(90deg);
+            opacity: 0;
+            cursor: pointer;
+            .duyi-header-button-midline {
                 position: relative;
-                display: inline-block;
-                float: right;
-                height: 110px;
-                margin: 0;
-                z-index: 2;
-                padding-right: 150px;
-                padding-top: 11px;
-                .duyi-header-li-line {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: 4px;
-                    width: 94px;
-                    background-color: #fff;
-                    transition: left .3s ease-in-out 0s, visibility .1s;    
-                }
-                .duyi-header-li-line-show {
-                    visibility: visible;
-                }
-                .duyi-header-li-line-hide {
-                    visibility: hidden;
-                }
-                li:nth-child(1) {
-                    padding-left: 16px;
-                }
-                li:nth-child(2):hover~ .duyi-header-li-line  {
-                    left: 103px;
-                }
-                li:nth-child(3):hover~ .duyi-header-li-line {
-                    left: 222px;
-                }
-                li:nth-child(4):hover~ .duyi-header-li-line {
-                    left: 325px;
-                }
-                .duyi-header-li {
-                    position: relative;
-                    float: left;
-                    z-index: 2;
-                    margin-right: 25px;
-                    line-height: 110px;
-                    white-space: nowrap;
-                    transition: opacity .45s,transfrom .45s,visibility .45s, -webkit-transform .45s;
-                    a {
-                        height: 100%;
-                        position: relative;
-                        display: inline-block;
-                        padding: 0 15px;
-                        color: #fff;
-                        cursor: pointer;
-                        span {
-                            font-size: 16px;
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .duyi-header-show {
-        opacity: 1;
-        visibility: visible;
-    }
-    .duyi-header-hide {
-        opacity: 0;
-        visibility: hidden;
-    }
-    .duyi-header-button {
-        visibility: hidden;
-        position: fixed;
-        top: 35px;
-        right: 35px;
-        width: 60px;
-        height: 60px;
-        z-index: 999;
-        padding: 20px;
-        border-radius: 50%;
-        background-color: #fff;
-        box-shadow: 0 8px 20px 2px rgba(0,0,0,.15);
-        border: 0;
-        text-shadow: none;
-        outline: none;
-        transform: translate3d(-1050%, 0, 0) rotate(90deg);
-        opacity: 0;
-        cursor: pointer;
-        .duyi-header-button-midline {
-            position: relative;
-            width: 22px;
-            height: 18px;
-            span {
-                display: block;
-                position: absolute;
-                right: 0;
-                left: 0;
-                height: 2px;
-                transition: all .15s;
-                background-color: #1e2b31;
-            }
-            span:first-of-type {
-                top: 50%;
-                transform: translate3d(0, -50%, 0);
-            }
-            span:nth-of-type(2) {
-                top: 0;
-                transform: translateZ(0) rotate(0) scaleX(1);
-            }
-            span:nth-of-type(3) {
-                bottom: 0;
-                transform: translateZ(0) rotate(0) scaleX(1);
-            }
-        }
-    }
-    .duyi-header-button-toggle-transition {
-        transition: all .45s;
-    }
-    .duyi-header-button-toggle-show {
-        opacity: 1 !important;
-        transform: translateX(0) rotate(0) !important;
-        visibility: visible !important;
-    }
-    .duyi-header-button-toggle-hide {
-        opacity: 0!important;
-        visibility: hidden!important;
-        transform: translate3d(-1050%, 0, 0) rotate(90deg)!important;
-    }
-    .duyi-header-button:hover {
-        .duyi-header-button-midline {
-            span:nth-of-type(3) {
-                transform: translate3d(-7px, -4px, 0) rotate(45deg) scaleX(.6);
-            }
-            span:nth-of-type(2) {
-                transform: translate3d(-7px, 4px, 0) rotate(-45deg) scaleX(.5);
-            }
-        }
-    }
-    .duyi-footer {
-        margin-top: -563px;
-        width: 100%;
-        min-width: 1300px;
-        background-color: #2e3037;
-        height: 563px;
-        .duyi-main-footer {     
-            padding-top: 142px;
-            padding-bottom: 205px;
-            color: #fff;
-            @media (max-width: 992px) {
-                .duyi-footer-categories {
-                    display: none;
-                }
-                .duyi-footer-intro {
-                    text-align: center;
-                }
-                .duyi-footer {
-                    height: 437px;
-                }
-            }
-            .duyi-footer-intro {
-                padding-bottom: 20px;
-                font-size: 14px;
-                p {
-                    white-space: normal;
-                    word-wrap: break-word;
-                    word-break: break-all;
-                }
-                p:nth-child(1) {
-                    padding-bottom: 10px;
-                }
-                p:nth-child(2) {
-                    line-height: 22px;
-                }
-            }
-            .duyi-footer-categories {
-                padding-left: 80px;
-                p {
-                    font-size: 16px;
-                }
-                ul {
-                    li {
-                        font-size: 16px;
-                        display: block;
-                        height: 36px;
-                        line-height: 36px;
-                        // margin-bottom: 15px;
-                    }
-                }
-            }
-            .duyi-footer-qrcode {
-                padding-left: 60px;
-                img {
-                    width: 140px;
-                    height: 140px;
-                    border: 1px solid black
-                }
-                p {
-                    margin-top: 20px;
-                } 
-            }
-        }
-        .duyi-copyright {
-            height: 82px;
-            line-height: 82px;
-            text-align: center;
-            font-size: 12px;
-            color: #fff;
-            background-color: #292c36;
-            p {
-                margin: 0;
-            }
-        }
-    }
-    .duyi-content {
-        padding-bottom: 563px;
-        #duyi-carousel {
-            margin-bottom: 60px;
-            .carousel-indicators {
-                li {
-                    margin-right: 40px;
-                    background-color: #fff;
-                }
-                li:nth-child(3) {
-                    margin-right: 0;
-                }
-                .active {
-                    background-color: yellow;
-                }
-            }
-            .carousel-inner {
-                .item {
-                    height: 790px;
-                    .duyi-carousel-img {
-                        width: 100%;
-                        height: 790px;
-                        background: url(../images/banner.png) no-repeat;
-                        background-size: cover;
-                    }
-                }
-            }
-            .duyi-carousel-left, .duyi-carousel-right {
-                width: 17px;
-                height: 31px;
-                position: absolute;
-                top: 46%;
-                margin-top: -20px;
-                cursor: pointer;
-                // background: url(../i) no-repeat;
-            }
-            .duyi-carousel-left {
-                left: 42px;
-                background: url(../images/left.png) no-repeat;
-                // background-position: -140px 50px;
-            }
-            .duyi-carousel-right {
-                right: 42px;
-                left: auto;
-                background: url(../images/right.png) no-repeat;
-                // background-position: -19px 50px;
-            }
-        }
-        .duyi-student-show {
-            margin-bottom: 90px;
-            .duyi-student-title {
-                margin-bottom: 20px;
-                text-align: center;
-                h2 {
-                    font-size: 50px;
-                    font-weight: bold;
-                    color: #232323;
-                }
+                width: 22px;
+                height: 18px;
                 span {
                     display: block;
-                    margin: 20px auto 0;
-                    width: 20px;
-                    height: 2px;
-                    background: burlywood;
-                }
-                h3 {
-                    font-size: 24px;
-                    color: #232323;
-                }
-            }
-            .duyi-student-photo {
-                position: relative;
-                padding-left: 6px;
-                img {
-                    width: 100%;
-                    height: 200%;
-                }
-                .duyi-student-photo-hide {
-                    display: none;
                     position: absolute;
+                    right: 0;
                     left: 0;
-                    top: 0;
-                    z-index: 1;
-                    width: 200px;
-                    height: 200px;
+                    height: 2px;
+                    transition: all .15s;
+                    background-color: #1e2b31;
                 }
-                .duyi-student-photo-row {
-                    // margin-bottom: 11px;
-                    .duyi-student-photo-img {
-                        margin-bottom: 11px;
-                        padding-left: 11px;
-                        padding-right: 0;
-                    }
+                span:first-of-type {
+                    top: 50%;
+                    transform: translate3d(0, -50%, 0);
+                }
+                span:nth-of-type(2) {
+                    top: 0;
+                    transform: translateZ(0) rotate(0) scaleX(1);
+                }
+                span:nth-of-type(3) {
+                    bottom: 0;
+                    transform: translateZ(0) rotate(0) scaleX(1);
                 }
             }
         }
-        .duyi-tencent {
-            background-color: #292c36;
-            padding-top: 322px;
-            padding-bottom: 180px;
-            margin-bottom: 124px;
-            .duyi-tencent-certification {
-                background-image: url(../images/certification.png);
-                background-repeat: no-repeat;
-                background-position: 250px 0;
-                color: #fffefe;
-                .duyi-tencent-title {           
-                    // padding-left: 371px;
-                    margin-bottom: 50px;
-                    .duyi-tencent-w {
-                        padding-top: 40px;
-                        font-size: 72px;
-                        font-weight: bold;
-                        span {
-                            font-size: 72px;
-                            color: yellow;
-                        }
-                    }
-                    .duyi-tencent-au {
-                        position: relative;
-                        font-size: 20px;
-                        height: 65px;
-                        span {
-                            position: absolute;
-                            display: inline-block;
-                            left: 300px;
-                        }
-                    } 
+        .duyi-header-button-toggle-transition {
+            transition: all .45s;
+        }
+        .duyi-header-button-toggle-show {
+            opacity: 1 !important;
+            transform: translateX(0) rotate(0) !important;
+            visibility: visible !important;
+        }
+        .duyi-header-button-toggle-hide {
+            opacity: 0!important;
+            visibility: hidden!important;
+            transform: translate3d(-1050%, 0, 0) rotate(90deg)!important;
+        }
+        .duyi-header-button:hover {
+            .duyi-header-button-midline {
+                span:nth-of-type(3) {
+                    transform: translate3d(-7px, -4px, 0) rotate(45deg) scaleX(.6);
                 }
-                .duyi-tencent-detail {
-                    font-size: 17px;
-                    line-height: 30px;
+                span:nth-of-type(2) {
+                    transform: translate3d(-7px, 4px, 0) rotate(-45deg) scaleX(.5);
                 }
             }
-            @media (max-width: 1200px) {
-                .duyi-tencent-certification {
-                    width: 100%;
+        }
+        .duyi-footer {
+            margin-top: -563px;
+            width: 100%;
+            min-width: 1300px;
+            background-color: #2e3037;
+            height: 563px;
+            font-family: PingFang;
+            .duyi-main-footer {     
+                padding-top: 142px;
+                padding-bottom: 205px;
+                color: #fff;
+                @media (max-width: 992px) {
+                    .duyi-footer-categories {
+                        display: none;
+                    }
+                    .duyi-footer-intro {
+                        text-align: center;
+                    }
+                    .duyi-footer {
+                        height: 437px;
+                    }
+                }
+                .duyi-footer-intro {
+                    padding-bottom: 20px;
+                    font-size: 14px;
+                    p {
+                        white-space: normal;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                    }
+                    p:nth-child(1) {
+                        padding-bottom: 10px;
+                        font-weight: bold;
+                    }
+                    p:nth-child(2) {
+                        line-height: 22px;
+                    }
+                }
+                .duyi-footer-categories {
+                    padding-left: 80px;
+                    p {
+                        font-size: 16px;
+                    }
+                    ul {
+                        li {
+                            font-size: 16px;
+                            display: block;
+                            height: 36px;
+                            line-height: 36px;
+                            // margin-bottom: 15px;
+                        }
+                    }
+                }
+                .duyi-footer-qrcode {
+                    padding-left: 60px;
+                    img {
+                        width: 140px;
+                        height: 140px;
+                        border: 1px solid black
+                    }
+                    p {
+                        margin-top: 20px;
+                    } 
+                }
+            }
+            .duyi-copyright {
+                height: 82px;
+                line-height: 82px;
+                text-align: center;
+                font-size: 12px;
+                color: #fff;
+                background-color: #292c36;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        .duyi-content {
+            padding-bottom: 563px;
+            #duyi-carousel {
+                margin-top: 110px;
+                margin-bottom: 60px;
+                .carousel-indicators {
+                    li {
+                        margin-right: 40px;
+                        background-color: #fff;
+                    }
+                    li:nth-child(3) {
+                        margin-right: 0;
+                    }
+                    .active {
+                        background-color: yellow;
+                    }
+                }
+                .carousel-inner {
+                    .item {
+                        height: 790px;
+                        .duyi-carousel-img {
+                            width: 100%;
+                            height: 790px;
+                            background: url(../images/banner.png) no-repeat 50% 0 / cover;
+                        }
+                    }
+                }
+                .duyi-carousel-left, .duyi-carousel-right {
+                    width: 17px;
+                    height: 31px;
+                    position: absolute;
+                    top: 46%;
+                    margin-top: -20px;
+                    cursor: pointer;
+                }
+                .duyi-carousel-left {
+                    left: 42px;
+                    background: url(../images/left.png) no-repeat;
+                }
+                .duyi-carousel-right {
+                    right: 42px;
+                    left: auto;
+                    background: url(../images/right.png) no-repeat;
+                }
+            }
+            .duyi-student-show {
+                font-family: PingFang;
+                margin-bottom: 90px;
+                .duyi-student-title {
+                    margin-bottom: 20px;
                     text-align: center;
-                    background-position: 500px 0;
-                    .duyi-tencent-au {
-                        span {
-                            left: 550px!important;
+                    h2 {
+                        font-size: 50px;
+                        font-weight: bold;
+                        color: #232323;
+                    }
+                    span {
+                        display: block;
+                        margin: 20px auto 0;
+                        width: 20px;
+                        height: 2px;
+                        background: burlywood;
+                    }
+                    h3 {
+                        font-size: 24px;
+                        color: #232323;
+                        font-weight: bold;
+                    }
+                }
+                .duyi-student-photo {
+                    position: relative;
+                    padding-left: 6px;
+                    img {
+                        width: 100%;
+                        height: 200%;
+                    }
+                    .duyi-student-photo-hide {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: 1;
+                        width: 0;
+                        height: 0;
+                        transition: width .5s, height .5s;
+                    }
+                    .duyi-student-photo-row {
+                        // margin-bottom: 11px;
+                        .duyi-student-photo-img {
+                            margin-bottom: 11px;
+                            padding-left: 11px;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+            .duyi-tencent {
+                font-family: PingFang;
+                background-color: #292c36;
+                padding-top: 322px;
+                padding-bottom: 180px;
+                margin-bottom: 124px;
+                .duyi-tencent-certification {
+                    background: url(../images/certification.png) no-repeat 250px 0;
+                    color: #fffefe;
+                    .duyi-tencent-title {           
+                        // padding-left: 371px;
+                        margin-bottom: 50px;
+                        .duyi-tencent-w {
+                            padding-top: 40px;
+                            font-size: 72px;
+                            font-weight: bold;
+                            span {
+                                font-size: 72px;
+                                color: yellow;
+                            }
+                        }
+                        .duyi-tencent-au {
+                            position: relative;
+                            font-size: 20px;
+                            height: 65px;
+                            span {
+                                position: absolute;
+                                display: inline-block;
+                                left: 300px;
+                            }
+                        } 
+                    }
+                    .duyi-tencent-detail {
+                        font-size: 17px;
+                        line-height: 30px;
+                    }
+                }
+                @media (max-width: 1200px) {
+                    .duyi-tencent-certification {
+                        width: 100%;
+                        text-align: center;
+                        background-position: 500px 0;
+                        .duyi-tencent-au {
+                            span {
+                                left: 550px!important;
+                            }
+                        }
+                    }
+                    .duyi-tencent-photo {
+                        margin-top: 20px!important;
+                    }
+                }
+                @media (max-width: 990px) {
+                    .duyi-tencent-certification {
+                        background-position: 400px 0;
+                        .duyi-tencent-au {
+                            span {
+                                left: 440px!important;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 768px) {
+                    .duyi-tencent-certification {
+                        background-position: 650px 0;
+                        .duyi-tencent-au {
+                            span {
+                                left: 710px!important;
+                            }
                         }
                     }
                 }
                 .duyi-tencent-photo {
-                    margin-top: 20px!important;
+                    margin-top: -132px;
+                    width: 550px;
+                    height: 688px;
+                    border: 1px solid #fff;
                 }
             }
-            @media (max-width: 990px) {
-                .duyi-tencent-certification {
-                    background-position: 400px 0;
-                    .duyi-tencent-au {
-                        span {
-                            left: 440px!important;
-                        }
+            .duyi-teacher {
+                font-family: PingFang;
+                margin-bottom: 146px;
+                .duyi-teacher-title {
+                    text-align: center;
+                    p {
+                        color: #242424;
+                    }
+                    p:nth-child(1) {
+                        font-size: 50px;
+                        font-weight: bold;
+                    }
+                    p:nth-child(3) {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                    span {
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        margin: 0 auto 19px;
+                        background-color: burlywood;
                     }
                 }
-            }
-            @media (max-width: 768px) {
-                .duyi-tencent-certification {
-                    background-position: 650px 0;
-                    .duyi-tencent-au {
-                        span {
-                            left: 710px!important;
-                        }
-                    }
-                }
-            }
-            .duyi-tencent-photo {
-                margin-top: -132px;
-                width: 550px;
-                height: 688px;
-                border: 1px solid black;
-            }
-        }
-        .duyi-teacher {
-            margin-bottom: 146px;
-            .duyi-teacher-title {
-                text-align: center;
-                p {
-                    color: #242424;
-                }
-                p:nth-child(1) {
-                    font-size: 50px;
-                    font-weight: bold;
-                }
-                p:nth-child(3) {
-                    font-size: 24px;
-                }
-                span {
-                    display: block;
-                    width: 20px;
-                    height: 2px;
-                    margin: 0 auto 19px;
-                    background-color: burlywood;
-                }
-            }
-            .duyi-teacher-detail {
-                margin: 120px auto 0;
-                padding: 0;
-                width: 76.384vw;
-                position: relative;
-                .duyi-teacher-wrapper {
-                    vertical-align: middle;
-                    padding: 0 4.1664vw 11.1104vw;
-                    width: 50%;
-                    box-sizing: border-box;
-                    float: left;
-                    .duyi-teacher-box {
-                        cursor: pointer;
-                        .duyi-teacher-photo {
-                            position: relative;
-                            overflow: visible;
-                            margin-top: 2.0832vw;
-                            position: relative;
-                            width: 100%;
-                            span {
-                                content: "";
-                                display: block;
-                                position: absolute;
-                                left: 2.0832vw;
-                                top: -2.0832vw;
-                                width: 86%;
-                                height: 100%;
-                                border: 3px solid currentColor;
-                                box-sizing: border-box;
-                                z-index: 3;
-                                transform: translateZ(0);
-                            }
-                            img {
+                .duyi-teacher-detail {
+                    margin: 120px auto 0;
+                    padding: 0;
+                    width: 76.384vw;
+                    position: relative;
+                    .duyi-teacher-wrapper {
+                        position: absolute;
+                        vertical-align: middle;
+                        padding: 0 4.1664vw 11.1104vw;
+                        width: 50%;
+                        box-sizing: border-box;
+                        float: left;
+                        .duyi-teacher-box {
+                            cursor: pointer;
+                            .duyi-teacher-photo {
+                                position: relative;
+                                overflow: visible;
+                                margin-top: 2.0832vw;
+                                position: relative;
                                 width: 100%;
-                                transition: none;
-                            }
-                        }
-                        .duyi-teacher-info {
-                            position: relative;
-                            padding-left: 2.0832vw;
-                            margin-top: 3.05536vw;
-                            transform: translateZ(0);
-                            p:nth-child(1) {
-                                font-size: 36px;
-                                color: #242424;
-                                letter-spacing: .1em;
-                                font-weight: 700;
-                                text-transform: uppercase;
                                 span {
-                                    font-size: 20px;
-                                    margin-left: 20px;
+                                    content: "";
+                                    display: block;
+                                    position: absolute;
+                                    left: 2.0832vw;
+                                    top: -2.0832vw;
+                                    width: 86%;
+                                    height: 100%;
+                                    border: 3px solid currentColor;
+                                    box-sizing: border-box;
+                                    z-index: 3;
+                                    transform: translateZ(0);
+                                }
+                                img {
+                                    width: 100%;
+                                    transition: none;
                                 }
                             }
-                            p:nth-child(2) {
-                                font-size: 18px;
-                                line-height: 1.35;
+                            .duyi-teacher-info {
+                                position: relative;
+                                padding-left: 2.0832vw;
+                                margin-top: 3.05536vw;
+                                transform: translateZ(0);
+                                p:nth-child(1) {
+                                    font-size: 36px;
+                                    color: #242424;
+                                    letter-spacing: .1em;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    span {
+                                        font-size: 20px;
+                                        margin-left: 20px;
+                                    }
+                                }
+                                p:nth-child(2) {
+                                    font-size: 18px;
+                                    line-height: 1.35;
+                                }
+                            }
+                            .duyi-teacher-info:before,
+                            .duyi-teacher-info:after {
+                                content: "";
+                                width: 1px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                display: block;
+                                height: 100%;
+                            }
+                            .duyi-teacher-info::before {
+                                background: #d9d7da;                            
+                            }
+                            .duyi-teacher-info:after {
+                                background: #000;
+                                transform: scale3d(0,0,1) translateZ(0);
+                                transition: transform .51s ease;
+                                transform-origin: top center;
                             }
                         }
-                        .duyi-teacher-info:before,
-                        .duyi-teacher-info:after {
-                            content: "";
-                            width: 1px;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            display: block;
-                            height: 100%;
-                        }
-                        .duyi-teacher-info::before {
-                            background: #d9d7da;                            
-                        }
-                        .duyi-teacher-info:after {
-                            background: #000;
-                            transform: scale3d(0,0,1) translateZ(0);
-                            transition: transform .51s ease;
-                            transform-origin: top center;
+                        .duyi-teacher-box:hover {
+                            .duyi-teacher-info:after {
+                                transform: scaleX(1) translateZ(0);
+                            }
                         }
                     }
-                    .duyi-teacher-box:hover {
-                        .duyi-teacher-info:after {
-                            transform: scaleX(1) translateZ(0);
-                        }
-                    }
+                }
+                .duyi-teacher-detail:nth-of-type(2) {
+                    // height: 1172px;
+                    height: 88vw;
+                }
+                .duyi-teacher-detail:nth-child(3) {
+                    // height: 763px;
+                    height: 55vw;
+                }
+                .duyi-teacher-detail:nth-child(4) {
+                    // height: 840px;
+                    height: 50vw;
+                }
+            
+                .duyi-teacher-detail:after {
+                    content: "";
+                    clear: both;
+                    display: block;
                 }
             }
-            .duyi-teacher-detail:after {
-                content: "";
-                clear: both;
-                display: block;
-            }
-        }
-        .duyi-cooperation {
-            margin-bottom: 120px;
-            .duyi-cooperation-title {
-                text-align: center;
-                p:nth-child(1) {
-                    font-size: 46px;
-                    font-weight: bold;
-                    color: #000;
-                }
-                p:nth-child(2) {
-                    margin-top: 12px;
-                    font-size: 30px;
-                    color: #131313;
-                }
-            }
-            .duyi-cooperation-detail {
-                .duyi-cooperation-detail-row {
-                    border-bottom: 1px solid black;
-                    div:nth-child(4) {
-                        border-right: 0;
+            .duyi-cooperation {
+                font-family: PingFang;
+                margin-bottom: 120px;
+                .duyi-cooperation-title {
+                    text-align: center;
+                    p:nth-child(1) {
+                        font-size: 46px;
+                        font-weight: bold;
+                        color: #000;
                     }
-                    .duyi-cooperation-detail-img {
-                        padding: 10px;
-                        border-right: 1px solid black;
-                        img {
-                            width: 100%;
-                            height: 118px;
+                    p:nth-child(2) {
+                        margin-top: 12px;
+                        font-size: 30px;
+                        color: #131313;
+                    }
+                }
+                .duyi-cooperation-detail {
+                    .duyi-cooperation-detail-row {
+                        border-bottom: 1px solid black;
+                        div:nth-child(4) {
+                            border-right: 0;
+                        }
+                        .duyi-cooperation-detail-img {
+                            padding: 10px;
+                            border-right: 1px solid black;
+                            img {
+                                width: 100%;
+                                height: 118px;
+                            }
                         }
                     }
-                }
-                div:nth-child(3) {
-                    border-bottom: 0; 
+                    div:nth-child(3) {
+                        border-bottom: 0; 
+                    }
                 }
             }
         }
     }
+}
+.fullpageHeight {
+    // 解决fullpage插件对于高度计算不准确的问题
+    overflow-x: hidden;
+    overflow-y: auto;
 }

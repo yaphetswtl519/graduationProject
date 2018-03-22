@@ -1,0 +1,366 @@
+.duyi-content {
+    .table {
+        margin-bottom: 0;
+    }
+    .duyi-study-poster {
+        font-size: 50px;
+        .duyi-study-poster-title {
+            position: absolute;
+            top: 33%;
+            width: 100vw;
+            text-align: center;
+            p:nth-child(1) {
+                font-size: 48px;
+                font-weight: bold;
+                color: #282828;
+            }
+            p:nth-child(2) {
+                margin-top: 2px;
+                font-family: PingFang;
+                font-size: 16px;
+                color: #4e4e4e;
+            }
+        }
+        @media (max-width: 1500px) {
+            .duyi-study-poster-img-wrapper {
+                padding: 0 15vw!important;
+            }
+        }
+        @media (max-width: 1300px) {
+            .duyi-study-poster-img-wrapper {
+                padding: 0 10vw!important;
+            }
+        }
+        @media (max-width: 1000px) {
+            .duyi-study-poster-img-wrapper {
+                padding: 0 5vw!important;
+            }
+        }
+        .duyi-study-poster-img-wrapper {
+            position: absolute;
+            width: 100vw;
+            bottom: 0;
+            padding: 0 18vw;
+            .duyi-study-poster-img {
+                width: 100%;
+                background: url(../images/study-banner.png) no-repeat 50% 0 / contain;
+            }
+        }
+    }
+    .duyi-study-curriculum {
+        width: 100vw;
+        .duyi-study-curriculum-web,
+        .duyi-study-curriculum-java {
+            position: relative;
+            height: 100%;
+            width: 50vw;
+            text-align: center;
+            cursor: pointer;
+            span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 48px;
+                font-family: PingFang;
+            }
+        }
+        .duyi-study-curriculum-web {
+            float: left;
+            background-color: #ccc;
+            span {
+                color: #282828;
+                right: 182px;
+            }
+        }
+        .duyi-study-curriculum-java {
+            float: right;
+            background-color: #4e4e4e;
+            span {
+                color: #fff;
+                left: 182px;;
+            }
+        }
+    }
+    .duyi-study-curriculum::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .duyi-study-exercises {
+        .duyi-study-exercises-title {
+            position: absolute;
+            width: 100vw;
+            top: 12%;
+            text-align: center;
+            p:nth-child(1) {
+                font-size: 48px;
+                font-weight: bold;
+                font-family: PingFang;
+                color: #282828;
+            }
+            div {
+                background: url('../images/hand-drag.png') no-repeat 50% 0 / contain;
+                width: 100%;
+                height: 34px;
+                margin: 22px 0 19px;
+            }
+            p:nth-child(3) {
+                font-size: 22px;
+                font-family: PingFang;
+                color: #6a6969;
+                font-weight: bold;
+            }
+        }
+        .duyi-study-exercises-content {
+            position: relative;
+            overflow: hidden;
+            top: 18%;
+            padding-left: 117px;
+            cursor: pointer;
+            .duyi-study-exercises-scroll-wrapper {
+                white-space: nowrap;
+                position: relative;
+                padding-right: 20px;
+                width: 2600px;
+                .duyi-study-exercises-scroll-item {
+                    // margin-right: 128px;
+                    margin-right: 4.16%;
+                    // border: 1px solid black;
+                    width: 15.3%;
+                    // height: 530px;
+                    display: inline-block;
+                    vertical-align: top;
+                    .duyi-study-exercises-scroll-img {
+                        width: 370px;
+                        height: 370px;
+                        background: url(http://t10.baidu.com/it/u=3642122811,4183436585&fm=58&w=395&h=395&img.JPEG) no-repeat;
+                        background-size: cover;
+                    }
+                    .duyi-study-exercises-scroll-info {
+                        margin-top: 35px;
+                        font-family: PingFang;                        
+                        p {
+                            font-size: 22px;
+                            color: #242424;
+                            font-weight: bold;
+                        }
+                        div {
+                            font-size: 12px;
+                            color: #747474;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .duyi-study-consult {
+        .duyi-study-consult-title {
+            width: 100vw;
+            position: relative;
+            // top: 10%;
+            margin-top: 5vw;
+            text-align: center;
+            p {
+                font-size: 48px;
+                font-weight: bold;
+                font-family: PingFang;
+                color: #282828;
+            }
+            span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                margin: 38px auto 0;
+                background-color: burlywood;
+            }
+        }
+        @media (max-width:1400px) {
+            .duyi-study-consult-way-row {
+                padding: 0 5vw!important;
+                .duyi-study-consult-way-item {
+                    width: 30vw!important;
+                }
+            }
+        }
+        @media (max-width:1100px) {
+            .duyi-study-consult-way-row {
+                padding: 0!important;
+                .duyi-study-consult-way-item {
+                    width: 33.3vw!important;
+                }
+            }
+        }
+        @media (max-width:900px) {
+            .duyi-study-consult-way-row {
+                padding: 0 5vw!important;
+                .duyi-study-consult-way-item {
+                    width: 90vw!important;
+                }
+            }
+        }
+        .duyi-study-consult-way-row {
+            margin: 6vw auto 0;
+            width: 100vw;
+            padding: 0 12.5vw;
+            .duyi-study-consult-way-item {
+                float: left;
+                padding: 0 55px;
+                width: 25vw;
+                .duyi-study-consult-way-item-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 480px;
+                    background-color: #ccc;
+                    .duyi-study-consult-way-wechat-photo,
+                    .duyi-study-consult-way-phone-photo,
+                    .duyi-study-consult-way-online-photo {
+                        position: relative;
+                        top: 114px;
+                        width: 100%;
+                        background-repeat: no-repeat;
+                        background-position-x: 50%;
+                        background-size: contain;
+                        height: 56px;
+                    }
+                    .duyi-study-consult-way-wechat-photo {
+                        background-image: url(../images/wechat.png);
+                    }
+                    .duyi-study-consult-way-phone-photo {
+                        background-image: url(../images/phone.png);
+                    }
+                    .duyi-study-consult-way-online-photo {
+                        background-image: url(../images/online.png);
+                    }
+                    .duyi-study-consult-way-wechat-qrcode {
+                        background: url(../images/wechat-qrcode.png) no-repeat 50% 0 / contain;
+                        width: 100%;
+                        height: 100px;
+                        position: relative;
+                        top: 165px;
+                    }
+                    .duyi-study-consult-way-phone-number {
+                        position: relative;
+                        top: 185px;
+                        width: 100%;
+                        color: #636363;
+                        p {
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                        p:nth-child(1) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .duyi-study-consult-way-online-a {
+                        background: url(../images/link-teacher.png) no-repeat 50% 0 / contain;
+                        display: block;
+                        width: 100%;
+                        height: 33px;
+                        position: relative;
+                        top: 195px;
+                    }
+                }
+                p {
+                    color: #282828;
+                    margin-top: 32px;
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+        }
+        .duyi-study-consult-way-row:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+        .duyi-study-footer {
+            position: relative;
+            padding: 0 10vw;
+            width: 100vw;
+            height: 563px;
+            background-color: #2e3037;
+            font-family: PingFang;
+            margin-top: 130px;
+            .duyi-study-main-footer {
+                height: 481px;
+                padding: 142px 0 205px;
+                color: #fff;
+                .duyi-study-footer-item {
+                    float: left;
+                }
+                .duyi-study-footer-intro {
+                    padding-right: 9%;
+                    font-size: 14px;
+                    padding-bottom: 20px;
+                    width: 26vw;
+                    height: 100%;
+                    p {
+                        white-space: normal;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                    }
+                    p:nth-child(1) {
+                        padding-bottom: 10px;
+                        font-weight: bold;
+                    }
+                    p:nth-child(2) {
+                        line-height: 22px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 9;
+                        display: -webkit-box;
+                    }
+                }
+                .duyi-study-footer-categories {
+                    width: 16vw;
+                    p {
+                        font-size: 16px;
+                    }
+                    ul {
+                        li {
+                            font-size: 16px;
+                            display: block;
+                            height: 36px;
+                            line-height: 36px;
+                        }
+                    }
+                }
+                .duyi-study-footer-qrcode {
+                    width: 38vw;
+                    .duyi-study-footer-qrcode-row {
+                        width: 100%;
+                        .duyi-study-footer-qrcode-row-item {
+                            float: left;
+                            width: 25%;
+                            margin-right: 4%;
+                            div {
+                                background: url(../images/wechat-qrcode.png) no-repeat 50% 0 / contain;
+                                width: 100%;
+                                height: 144px;
+                            }
+                            p {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .duyi-study-copyright {
+                position: absolute;
+                margin-left: -10vw;
+                bottom: 0;
+                width: 100vw;
+                height: 82px;
+                line-height: 82px;
+                text-align: center;
+                font-size: 12px;
+                color: #fff;
+                background-color: #292c36;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}   

@@ -1,0 +1,55 @@
+extend studylayout
+
+block content
+	.duyi-content.duyi-study-fullpage
+		section.duyi-study-poster.section
+			.duyi-study-poster-title.container
+				p 零基础教学
+				p 渡一百分百保证毕业学员就业年薪10w+，达不到全额退还学费
+			.duyi-study-poster-img-wrapper
+				.duyi-study-poster-img
+
+		section.duyi-study-curriculum.section
+			.duyi-study-curriculum-web
+				span 前端课程
+			.duyi-study-curriculum-java
+				span JAVA课程
+
+		section.duyi-study-exercises.section
+			.duyi-study-exercises-title
+				p 水平测试套题
+				div
+				p Drag for more
+			.duyi-study-exercises-content
+				.duyi-study-exercises-scroll-wrapper
+					each item in [0,1,2,3,4]
+						.duyi-study-exercises-scroll-item
+							.duyi-study-exercises-scroll-img
+							.duyi-study-exercises-scroll-info
+								p [html基础练习]
+								div 
+									span sdjaijdiajdijasildjaljdlajljl
+					
+		section.duyi-study-consult.section
+			.duyi-study-consult-title
+				p 咨询课程
+				span
+			.duyi-study-consult-way-row
+				.duyi-study-consult-way-item.duyi-study-consult-way-wechat
+					.duyi-study-consult-way-item-wrapper
+						.duyi-study-consult-way-wechat-photo
+						.duyi-study-consult-way-wechat-qrcode
+					p WeChat
+				.duyi-study-consult-way-item.duyi-study-consult-way-phone
+					.duyi-study-consult-way-item-wrapper
+						.duyi-study-consult-way-phone-photo
+						.duyi-study-consult-way-phone-number
+							p +86 123 4563 7896
+							p +86 173 4523 7556
+					p Phone
+				.duyi-study-consult-way-item.duyi-study-consult-way-online
+					.duyi-study-consult-way-item-wrapper
+						.duyi-study-consult-way-online-photo
+						a(href="#").duyi-study-consult-way-online-a
+					p Online
+			include includes/study-footer
