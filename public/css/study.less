@@ -48,36 +48,144 @@
         }
     }
     .duyi-study-curriculum {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         width: 100vw;
         .duyi-study-curriculum-web,
         .duyi-study-curriculum-java {
+            transition: width ease 1s, opacity .5s;
             position: relative;
             height: 100%;
             width: 50vw;
             text-align: center;
             cursor: pointer;
-            span {
+            .duyi-study-curriculum-title {
+                // display: none;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 font-size: 48px;
                 font-family: PingFang;
+                transition: opacity .5s;
+            }
+            .duyi-study-curriculum-title::after {
+                content: "";
+                width: 40px;
+                height: 2px;
+                background-color: red;
+                display: block;
+                margin: 20px auto 0;
             }
         }
         .duyi-study-curriculum-web {
+            // width: 90vw;
             float: left;
             background-color: #ccc;
-            span {
+            div {
                 color: #282828;
-                right: 182px;
+                right: 15vw;
             }
         }
         .duyi-study-curriculum-java {
+            // width: 10vw;
             float: right;
             background-color: #4e4e4e;
-            span {
+            div {
                 color: #fff;
-                left: 182px;;
+                left: 15vw;
+            }
+        }
+        .duyi-study-curriculum-web-detail-wrapper,
+        .duyi-study-curriculum-java-detail-wrapper {
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            padding: 10% 8% 5%;
+            display: none;
+            opacity: 0;
+            transition: opacity .5s;
+            @media (max-width:1300px) {
+                .duyi-study-curriculum-web-detail:nth-child(1),
+                .duyi-study-curriculum-java-detail:nth-child(1) {
+                    width: 45%!important;
+                    margin-right: 10%!important;
+                }
+                .duyi-study-curriculum-web-detail:nth-child(2),
+                .duyi-study-curriculum-java-detail:nth-child(2) {
+                    width: 45%!important;
+                    margin-right: 0!important;
+                }
+                .duyi-study-curriculum-web-detail:nth-child(3),
+                .duyi-study-curriculum-java-detail:nth-child(3) {
+                    display: none!important;
+                    width: 0!important;
+                    height: 0!important;;
+                }
+            }
+            @media (max-width:850px) {
+                .duyi-study-curriculum-web-detail:nth-child(1),
+                .duyi-study-curriculum-java-detail:nth-child(1) {
+                    width: 100%!important;
+                }
+                .duyi-study-curriculum-web-detail:nth-child(2),
+                .duyi-study-curriculum-web-detail:nth-child(3),
+                .duyi-study-curriculum-java-detail:nth-child(2),
+                .duyi-study-curriculum-java-detail:nth-child(3) {
+                    display: none!important;
+                    width: 0!important;
+                    height: 0!important;
+                }
+            }
+            .duyi-study-curriculum-web-detail,
+            .duyi-study-curriculum-java-detail {
+                position: relative;
+                overflow: hidden;
+                float: left;
+                width: 30%;
+                height: 100%;
+                margin-right: 5%;
+                li {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+                    .duyi-study-curriculum-web-detail-img,
+                    .duyi-study-curriculum-java-detail-img {
+                        display: block;
+                        width: 100%;
+                        height: 80%;
+                    }
+                    p {
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: bold;
+                        font-family: PingFang;
+                    }
+                    p:nth-child(2) {
+                        margin-top: 10px;
+                        color: #ff5c5c;
+                        line-height: 30px;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        display: -webkit-box;
+                        overflow: hidden;
+                    }
+                    p:nth-child(3) {
+                        position: absolute;
+                        bottom: 5px;
+                        color: #949494;
+                    }
+                }
+                li:first-child {
+                    display: inline-block;
+                }
+            }
+            .duyi-study-curriculum-web-detail:last-child,
+            .duyi-study-curriculum-java-detail:last-child {
+                margin-right: 0;
             }
         }
     }
@@ -99,10 +207,29 @@
                 color: #282828;
             }
             div {
-                background: url('../images/hand-drag.png') no-repeat 50% 0 / contain;
+                background: url('../images/handdrag-line.png') no-repeat 50% 0 / contain;
                 width: 100%;
-                height: 34px;
-                margin: 22px 0 19px;
+                height: 2px;
+                margin: 40px 0 35px;
+                position: relative;
+                @keyframes handMove{
+                    0% {
+                        transform: translateX(-40px);
+                    }
+                    50% {
+                        transform: translateX(40px);
+                    }
+                    100% {
+                        transform: translateX(-40px);
+                    }
+                }
+                img {
+                    position: absolute;
+                    width: 32px;
+                    height: 34px;
+                    top: -15px;
+                    animation: handMove 4s linear infinite both;
+                }
             }
             p:nth-child(3) {
                 font-size: 22px;
@@ -154,6 +281,10 @@
         }
     }
     .duyi-study-consult {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         .duyi-study-consult-title {
             width: 100vw;
             position: relative;

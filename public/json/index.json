@@ -39,40 +39,52 @@
     ],
     "cooperation": [
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
         },
         {
-            "imgUrl": "http://cdn.alloyteam.com/assets/img/alloyphoto-cd4563.jpg"
-        }  
+            "lightImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use11.png",
+            "darkImg": "http://mapopen-website-wiki.cdn.bcebos.com/homePage/images/hp-use1.png"
+        }
     ]
 }

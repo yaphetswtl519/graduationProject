@@ -22,12 +22,12 @@ block content
         h2 优秀学员俱乐部
         span
         h3 25w--45w年薪
-      .duyi-student-photo.container
+      .duyi-student-photo
         each student, index in studentInfo
           if index % 4 === 0
-            .duyi-student-photo-row.row
+            .duyi-student-photo-row
               each count in [0, 1, 2, 3]
-                .duyi-student-photo-img.col-md-3.col-sm-6.col-xs-12
+                .duyi-student-photo-img
                   img.duyi-student-photo-image(src=`${studentInfo[index+count].imgUrl}`)
 
     section.duyi-tencent
@@ -50,7 +50,6 @@ block content
         p 业界名师 卓尔不凡
         span
         p 来自互联网公司的大咖亲自授课，祝你圆梦IT
-        //- div.test(style="width:100px;height:100px;border:2px solid black")
       each itemq in [0, 1, 2]
         .duyi-teacher-detail
           each item in [0, 1]
@@ -68,13 +67,14 @@ block content
       .duyi-cooperation-title.container
         p 内推合作机构 助力学员就业
         p COOPERATION
-      .duyi-cooperation-detail.container
+      .duyi-cooperation-detail
         each cooperation, index in cooperationInfo
           if index % 4 === 0
-            .duyi-cooperation-detail-row.row
+            .duyi-cooperation-detail-row
               each count in [0, 1, 2, 3]
-                .duyi-cooperation-detail-img.col-md-3.col-sm-6.col-xs-12
-                  img(src=`${cooperationInfo[index+count].imgUrl}`)
+                .duyi-cooperation-detail-img
+                  img(src=`${cooperationInfo[index+count].lightImg}`).duyi-cooperation-img-light                
+                  img(src=`${cooperationInfo[index+count].darkImg}`).duyi-cooperation-img-dark
           
 
             

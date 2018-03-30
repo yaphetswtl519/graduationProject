@@ -11,14 +11,34 @@ block content
 
 		section.duyi-study-curriculum.section
 			.duyi-study-curriculum-web
-				span 前端课程
+				.duyi-study-curriculum-web-title.duyi-study-curriculum-title 前端课程
+				.duyi-study-curriculum-web-detail-wrapper
+					each lesson, ind in lessons
+						ul.duyi-study-curriculum-web-detail(id=`webslide${ind}`)
+							each item, index in lesson
+								li
+									.duyi-study-curriculum-web-detail-img(style="background-color: #bbb;")
+									p #{item.intro}
+									p
+										span.duyi-study-curriculum-author #{item.author}				
+
 			.duyi-study-curriculum-java
-				span JAVA课程
+				.duyi-study-curriculum-java-title.duyi-study-curriculum-title JAVA课程
+				.duyi-study-curriculum-java-detail-wrapper
+					each lesson, ind in lessons
+						ul.duyi-study-curriculum-java-detail(id=`javaslide${ind}`)
+							each item, index in lesson
+								li
+									.duyi-study-curriculum-java-detail-img(style="background-color: #bbb;")
+									p #{item.intro}
+									p
+										span.duyi-study-curriculum-author #{item.author}				
 
 		section.duyi-study-exercises.section
 			.duyi-study-exercises-title
 				p 水平测试套题
 				div
+					img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
 				p Drag for more
 			.duyi-study-exercises-content
 				.duyi-study-exercises-scroll-wrapper

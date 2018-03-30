@@ -1,0 +1,38 @@
+[
+    [
+        {
+            "imgUrl": "https://we3.jam3.com/assets/images/ddcarousel/requirementsDev.jpg",
+            "intro": "AAA是验证、授权和记账用户访问请求的服务器程序，提供验证授权以及帐户服务，主要目的是管理用户访问网络服务器，对具有访问权的用户提供服务。",
+            "author": "作者：AAAAA",
+            "browse": "2000"
+        },
+        {
+            "imgUrl": "https://we3.jam3.com/assets/images/ddcarousel/requirementsDev.jpg",
+            "intro": "xxxxxxxxxxxxxxxxxxxx",
+            "author": "作者：AAAAA",
+            "browse": "2000"
+        }
+    ],
+    [
+        {
+            "imgUrl": "https://we3.jam3.com/assets/images/ddcarousel/requirementsDev.jpg",
+            "intro": "xxxxxxxxxxxxxxxxxxxx",
+            "author": "作者：AAAAA",
+            "browse": "2000"
+        },
+        {
+            "imgUrl": "https://we3.jam3.com/assets/images/ddcarousel/requirementsDev.jpg",
+            "intro": "xxxxxxxxxxxxxxxxxxxx",
+            "author": "作者：AAAAA",
+            "browse": "2000"
+        }
+    ],
+    [
+        {
+            "imgUrl": "https://we3.jam3.com/assets/images/ddcarousel/requirementsDev.jpg",
+            "intro": "xxxxxxxxxxxxxxxxxxxx",
+            "author": "作者：AAAAA",
+            "browse": "2000"
+        }
+    ]
+]

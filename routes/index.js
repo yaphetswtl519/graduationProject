@@ -17,12 +17,29 @@ router.get('/', (req, res, next) => {
 
 /* 课程学习页 */
 router.get('/study', (req, res, next) => {
-  res.render('study');
+  fs.readFile('public/json/study.json', 'utf8', (err, studyData) =>{
+    if (err) throw err;
+    studyData = JSON.parse(studyData);
+    res.render('study', {
+      lessons: studyData
+    });
+  });
 });
 
-
 /* 学员展示页 */
+router.get('/student', (req, res, next) => {
+  fs.readFile('public/json/student.json', 'utf8', (err, studentData) => {
+    if (err) throw err;
+    studentData = JSON.parse(studentData);
+    res.render('student', {
+      employmentList: studentData
+    });
+  });
+});
 
 /* 关于页 */
+router.get('/about', (req, res, next) => {
+  res.render('about')
+});
 
 module.exports = router;

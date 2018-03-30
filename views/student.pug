@@ -1,0 +1,80 @@
+extend layout
+
+block content
+    .duyi-content
+        section.duyi-student-employment
+            .duyi-student-employment-title.container
+                p 学员就业榜
+                p Student Employment list
+                p sdadadiajdsajdijaidjoaj
+                .duyi-student-employment-arrow
+            .duyi-student-employment-content
+                .duyi-student-employment-content-wrapper
+                    .duyi-student-employment-content-headline
+                    .duyi-student-employment-content-list
+                        each employment in employmentList
+                            ul.duyi-student-employment-ul
+                                each item in employment
+                                    li.duyi-student-employment-li
+                                        span #{item.name}
+                                        span #{item.sex}
+                                        span #{item.school}
+                                        span #{item.company}
+                                        span #{item.salary}
+
+        section.duyi-student-describe
+            .duyi-student-story.duyi-student-describe-item
+                .duyi-student-story-left.duyi-student-describe-item-left
+                .duyi-student-story-right.duyi-student-describe-item-right
+                .duyi-student-story-wrapper
+                    video(src="http://ugcydzd.qq.com/c053934a8s6.mp4?vkey=9757284B224FFEF39C43A67939D9A9FCB782EE4100C2DCA7046F430A70D9DE300F4AD0744B1BAAC04C6906145B80E8DF3E20FBA8E3F2F072633EFD8919F22829046BEAAC4BD8D40F56CFAE44221932CEBD71E2F154CF169BAF558321C0A009EDBF3730B0C9E107466E13961757F154E028E6649B427505D1&br=91&platform=2&fmt=auto&level=0&sdtfrom=v3010&guid=1d1209d7361cca666e06fb06d9bc27f1")                    
+                    .duyi-student-story-right-wrapper
+                        .duyi-student-story-right-icon
+                            span
+                            span
+                        .duyi-student-story-right-font
+                            p 学员故事
+                            p 可是大卡的卡卡道口都卡送到考考懂啊空洞阿康soda口袋考考懂啊咳嗽得靠
+                    
+            .duyi-student-campus.duyi-student-describe-item
+                .duyi-student-campus-left.duyi-student-describe-item-left
+                .duyi-student-campus-right.duyi-student-describe-item-right
+                .duyi-student-campus-wrapper
+                    .duyi-student-campus-left-photo
+                        div
+                            p 校园环境
+                            span
+                    .duyi-student-campus-right-photo
+                        .duyi-student-campus-right-top
+                        .duyi-student-campus-right-bottom
+                            div
+                                img(src="http://p6alxlphh.bkt.clouddn.com/wechat-qrcode.png")
+                            div
+
+            .duyi-student-activity.duyi-student-describe-item
+                .duyi-student-activity-left.duyi-student-describe-item-left
+                .duyi-student-activity-right.duyi-student-describe-item-right
+                .duyi-student-activity-wrapper
+                    .duyi-student-activity-photo
+                    .duyi-student-activity-right-wrapper
+                        .duyi-student-activity-right-top sadadadnkashndkiahikdhailapskdapakpdakpk
+                        .duyi-student-activity-right-bottom
+                            p 素质拓展活动
+
+        section.duyi-student-production
+            .duyi-student-production-wrapper
+                .duyi-student-production-row
+                    .duyi-student-production-left
+                    .duyi-student-production-right
+                        p.duyi-student-production-right-title 学员作品
+                        div
+                            p 说的那肯定开呢
+                            p 阿拉斯加年贷款iaid就爱很嗲获得四海互动i啊活动
+                .duyi-student-production-dial
+                    .duyi-student-production-dial-wrapper
+                        div
+                        span.duyi-student-production-black-line
+                        span.duyi-student-production-hand
+                            img(src="http://p6alxlphh.bkt.clouddn.com/icon-hand.png")
+                        i.duyi-student-production-tri-top
+                        i.duyi-student-production-tri-bottom

@@ -1,0 +1,251 @@
+.duyi-content {
+    padding-bottom: 500px;
+    .duyi-about-summary {
+        margin-top: 348px;
+        .duyi-about-summary-title {
+            text-align: center;
+            font-family: PingFang;
+            color: #282828;
+            p:nth-child(1) {
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+            p:nth-child(2) {
+                font-size: 14px;
+                margin-bottom: 38px;
+            }
+            p:nth-child(3),
+            p:nth-child(4) {
+                font-size: 16px;
+            }
+        }
+        .duyi-about-summary-content {
+            width: 1480px;
+            margin: 104px auto 0;
+            height: 680px;
+            .duyi-about-summary-content-item {
+                float: left;
+                position: relative;
+                width: 370px;
+                height: 100%;
+            }
+            .duyi-about-summary-content-on {
+                padding: 118px 66px 0;
+                background-color: #eee;
+                p {
+                    display: inline-block;
+                    position: relative;
+                }
+                p:nth-child(1) {
+                    font-size: 40px;
+                }
+                p:nth-child(2),
+                p:nth-child(3) {
+                    font-family: PingFang;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #7a7a7a;
+                    top: 30px;
+                }
+                img {
+                    position: relative;
+                    width: 178px;
+                    height: 66px;
+                    top: 140px;
+                    left: 90px
+                }
+            }
+            .duyi-about-summary-content-tw {
+                overflow: hidden;
+                img {
+                    transition: all .4s ease 0s;
+                }
+            }
+            .duyi-about-summary-content-tw:hover img,
+            .duyi-about-summary-content-fo:hover img {
+                transform: scale(1.2);
+            }
+            .duyi-about-summary-content-th {
+                background-color: #fafafa;
+                padding: 118px 66px 0;
+                .duyi-about-summary-content-th-border {
+                    position: absolute;
+                    width: 300px;
+                    height: 550px;
+                    border: 2px solid #727272;
+                    top: 80px;
+                    left: 35px;
+                }
+                p {
+                    display: inline-block;
+                    font-size: 40px;
+                    position: relative;
+                }
+                ul {
+                    li {
+                       list-style: disc;
+                       font-size: 14px;
+                       color: #727272;
+                       line-height: 24px;
+                       font-family: PingFang; 
+                       margin-bottom: 30px;
+                    }
+                }
+            }
+            .duyi-about-summary-content-fo {
+                overflow: hidden;
+                img {
+                    transition: all .4s ease 0s;
+                }
+            }
+        }
+    }
+    .duyi-about-poster {
+        margin-top: 398px;
+        width: 100%;
+        position: relative;
+        height: 580px;
+        background-color: #f7f7f7;
+        @media (max-width: 1400px) {
+            .duyi-about-poster-content {
+                left: 0!important;
+                transform: translateX(0)!important;
+            }
+        }
+        .duyi-about-poster-content {
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1400px;
+            .duyi-about-poster-img-wrapper {
+                float: left;
+                width: 570px;
+                height: 855px;
+                overflow: hidden;
+                img {
+                    transition: all .4s ease 0s;
+                }
+            }
+            .duyi-about-poster-img-wrapper:hover img {
+                transform: scale(1.1);
+            }   
+            .duyi-about-poster-intro {
+                float: right;
+                height: 855px;
+                width: 830px;
+                padding-left: 122px;
+                padding-right: 240px;
+                padding-top: 426px;
+                p:nth-child(1) {
+                    font-size: 20px;
+                    margin-bottom: 28px;
+                }
+                p:nth-child(2),
+                p:nth-child(3) {
+                    font-size: 14px;
+                    color: #656565;
+                    font-family: PingFang;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .duyi-about-join {
+        width: 1170px;
+        margin: 338px auto 178px;
+        position: relative;
+        .duyi-about-join-wrapper {
+            padding-top: 124px;
+            height: 700px;
+            background: url(../images/join.png) no-repeat;
+            background-size: cover;
+            .duyi-about-join-title {
+                text-align: center;
+                color: #fff;
+                p:nth-child(1) {
+                    font-size: 50px;
+                }
+            }
+            .duyi-about-join-content {
+                width: 640px;
+                margin: 65px auto 0;
+                font-family: PingFang;
+                font-size: 20px;
+                color: #fff;
+                .duyi-about-join-content-left,
+                .duyi-about-join-content-right {
+                    position: relative;
+                    width: 255px;
+                    height: 350px;
+                    display: inline-block;
+                    border: 2px solid #fff;
+                    padding: 56px 20px 0;
+                }
+                .duyi-about-join-content-right　{
+                    margin-left: 130px;
+                }
+                .duyi-about-join-content-left::after,
+                .duyi-about-join-content-right::after {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 2px;
+                    background-color: sandybrown;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .duyi-about-map {
+            width: 100%;
+            border-top: 0;
+            p {
+                height: 74px;
+                line-height: 74px;
+                text-align: center;
+                font-size: 26px;
+                margin-bottom: 0;
+                border-right: 1px solid #eee;
+                border-left: 1px solid #eee;
+            }
+            .duyi-about-map-content {
+                background: url(../images/mapbg.png) no-repeat;
+                background-size: cover;
+                position: relative;
+                padding: 0 35px;
+                height: 447px;
+                #duyi-about-map-container {
+                    width: 1100px;
+                    height: 327px;
+                    position: relative;
+                    top: 50px;
+                }
+                .duyi-about-map-address {
+                    position: relative;
+                    top: 50px;
+                    height: 70px;
+                    line-height: 70px;
+                    span:nth-child(2) {
+                        float: right;
+                    }
+                }
+            }
+            .duyi-about-map-content::before {
+                content: '';
+                width: 0;
+                height: 0;
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top: 20px solid #fff;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
+        }
+    }
+}
