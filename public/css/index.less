@@ -165,7 +165,7 @@ html {
                     .duyi-header-li:after {
                         content: '';
                         width: 0px;
-                        height: 4px;
+                        height: 2px;
                         background-color: #fff;
                         position: absolute;
                         bottom: 20px;
@@ -198,11 +198,11 @@ html {
             right: 35px;
             width: 60px;
             height: 60px;
-            z-index: 999;
+            z-index: 1200;
             padding: 20px;
             border-radius: 50%;
             background-color: #fff;
-            box-shadow: 0 8px 20px 2px rgba(0,0,0,.15);
+            box-shadow: 0 4px 15px 0 rgba(0,0,0,.15);
             border: 0;
             text-shadow: none;
             outline: none;
@@ -220,7 +220,7 @@ html {
                     left: 0;
                     height: 2px;
                     transition: all .15s;
-                    background-color: #1e2b31;
+                    background-color: #222;
                 }
                 span:first-of-type {
                     top: 50%;
@@ -342,7 +342,7 @@ html {
             padding-bottom: 563px;
             #duyi-carousel {
                 margin-top: 110px;
-                margin-bottom: 60px;
+                // margin-bottom: 60px;
                 .carousel-indicators {
                     li {
                         margin-right: 40px;
@@ -357,11 +357,10 @@ html {
                 }
                 .carousel-inner {
                     .item {
-                        height: 790px;
                         .duyi-carousel-img {
-                            width: 100%;
-                            height: 790px;
-                            background: url(../images/banner.png) no-repeat 50% 0 / cover;
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -385,7 +384,9 @@ html {
             }
             .duyi-student-show {
                 font-family: PingFang;
-                margin-bottom: 90px;
+                padding-top: 60px;
+                padding-bottom: 90px;
+                position: relative;
                 .duyi-student-title {
                     margin-bottom: 20px;
                     text-align: center;
@@ -411,20 +412,20 @@ html {
                     position: relative;
                     width: 1180px;
                     margin: 0 auto;
-                    .duyi-student-photo-hide {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        z-index: 1;
-                        width: 0;
-                        height: 0;
-                        opacity: 0;
-                        transition: opacity 1s;
-                    }
-                    .duyi-student-photo-row {
-                        width: 100%;
-                        height: 100%;
-                    }
+                    // .duyi-student-photo-hide {
+                    //     position: absolute;
+                    //     left: 0;
+                    //     top: 0;
+                    //     z-index: 1;
+                    //     width: 0;
+                    //     height: 0;
+                    //     opacity: 0;
+                    //     transition: opacity 1s;
+                    // }
+                    // .duyi-student-photo-row {
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
                     .duyi-student-photo-img {
                         margin-bottom: 11px;
                         margin-left: 11px;
@@ -443,11 +444,16 @@ html {
                             transform: scale(1.3);
                         }
                     }
-                    .duyi-student-photo-row::after {
-                        content: '';
-                        clear: both;
-                        display: block;
-                    }
+                    // .duyi-student-photo-row::after {
+                    //     content: '';
+                    //     clear: both;
+                    //     display: block;
+                    // }
+                }
+                .duyi-student-photo:after {
+                    content: "";
+                    clear: both;
+                    display: block;
                 }
             }
             .duyi-tencent {
@@ -564,25 +570,24 @@ html {
                     }
                 }
                 .duyi-teacher-detail {
-                    margin: 120px auto 0;
-                    padding: 0;
-                    width: 76.384vw;
+                    margin: 90px auto 0;
+                    padding: 0 3px;
+                    width: 1300px;
+                    height: 100%;
                     position: relative;
                     .duyi-teacher-wrapper {
-                        position: absolute;
                         vertical-align: middle;
-                        padding: 0 4.1664vw 11.1104vw;
-                        width: 50%;
+                        width: 335px;
                         box-sizing: border-box;
                         float: left;
                         .duyi-teacher-box {
                             cursor: pointer;
+                            padding-right: 47px;
                             .duyi-teacher-photo {
                                 position: relative;
                                 overflow: visible;
                                 margin-top: 2.0832vw;
                                 position: relative;
-                                width: 100%;
                                 span {
                                     content: "";
                                     display: block;
@@ -595,31 +600,33 @@ html {
                                     box-sizing: border-box;
                                     z-index: 3;
                                     transform: translateZ(0);
+                                    display: none;
                                 }
                                 img {
-                                    width: 100%;
+                                    width: 288px;
+                                    height: 346px;
                                     transition: none;
                                 }
                             }
                             .duyi-teacher-info {
                                 position: relative;
-                                padding-left: 2.0832vw;
-                                margin-top: 3.05536vw;
+                                padding-left: 14px;
+                                margin-top: 55px;
                                 transform: translateZ(0);
                                 p:nth-child(1) {
                                     font-family: PingFangM;
-                                    font-size: 36px;
+                                    font-size: 24px;
                                     color: #242424;
                                     letter-spacing: .1em;
                                     text-transform: uppercase;
                                     span {
-                                        font-size: 20px;
+                                        font-size: 16px;
                                         margin-left: 20px;
                                     }
                                 }
                                 p:nth-child(2) {
                                     font-family: PingFangL;
-                                    font-size: 18px;
+                                    font-size: 12px;
                                     line-height: 1.35;
                                     color: #242424;
                                 }
@@ -644,23 +651,18 @@ html {
                                 transform-origin: top center;
                             }
                         }
+                        
                         .duyi-teacher-box:hover {
                             .duyi-teacher-info:after {
                                 transform: scaleX(1) translateZ(0);
                             }
                         }
                     }
+                    .duyi-teacher-wrapper:nth-child(4) {
+                        width: 288px;
+                        padding-right: 0;
+                    }
                 }
-                .duyi-teacher-detail:nth-of-type(2) {
-                    height: 88vw;
-                }
-                .duyi-teacher-detail:nth-child(3) {
-                    height: 55vw;
-                }
-                .duyi-teacher-detail:nth-child(4) {
-                    height: 50vw;
-                }
-            
                 .duyi-teacher-detail:after {
                     content: "";
                     clear: both;
@@ -688,13 +690,13 @@ html {
                     width: 1284px;
                     margin: 0 auto;
                     .duyi-cooperation-detail-row {
-                        border-bottom: 1px solid black;
+                        border-bottom: 1px solid #f5f5f5;
                         .duyi-cooperation-detail-img {
                             width: 321px;
                             height: 118px;
                             float: left;
                             position: relative;
-                            border-right: 1px solid black;
+                            border-right: 1px solid #f5f5f5;
                             img {
                                 position: absolute;
                                 left: 0;

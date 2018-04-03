@@ -16,7 +16,10 @@ block content
                             ul.duyi-student-employment-ul
                                 each item in employment
                                     li.duyi-student-employment-li
-                                        span #{item.name}
+                                        if item.name.length === 2                                    
+                                            span #{item.name[0]}&nbsp;&nbsp;&nbsp;&nbsp;#{item.name[1]}
+                                        else
+                                            span #{item.name}
                                         span #{item.sex}
                                         span #{item.school}
                                         span #{item.company}
@@ -27,7 +30,10 @@ block content
                 .duyi-student-story-left.duyi-student-describe-item-left
                 .duyi-student-story-right.duyi-student-describe-item-right
                 .duyi-student-story-wrapper.duyi-dom-translate
-                    video(src="http://ugcydzd.qq.com/c053934a8s6.mp4?vkey=9757284B224FFEF39C43A67939D9A9FCB782EE4100C2DCA7046F430A70D9DE300F4AD0744B1BAAC04C6906145B80E8DF3E20FBA8E3F2F072633EFD8919F22829046BEAAC4BD8D40F56CFAE44221932CEBD71E2F154CF169BAF558321C0A009EDBF3730B0C9E107466E13961757F154E028E6649B427505D1&br=91&platform=2&fmt=auto&level=0&sdtfrom=v3010&guid=1d1209d7361cca666e06fb06d9bc27f1")                    
+                    .duyi-student-story-left-video
+                        video.duyi-student-story-video(src="http://p6alxlphh.bkt.clouddn.com/video/video.mp4", poster="http://p6alxlphh.bkt.clouddn.com/video/poster.jpg")
+                        span.duyi-student-story-left-video-icon
+                        span.duyi-student-story-left-video-time 07:58
                     .duyi-student-story-right-wrapper
                         .duyi-student-story-right-icon
                             span
@@ -42,15 +48,17 @@ block content
                 .duyi-student-campus-wrapper
                     .duyi-student-campus-left-photo.duyi-dom-translate
                         div
+                            img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus1.png")
                             p 校园环境
                             span
                     .duyi-student-campus-right-photo
                         .duyi-student-campus-right-top.duyi-dom-translate
+                            img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus2.png")
                         .duyi-student-campus-right-bottom.duyi-dom-translate
                             div
-                                img(src="http://p6alxlphh.bkt.clouddn.com/wechat-qrcode.png")
+                                img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus3.png")
                             div
-
+                                img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus4.png")
             .duyi-student-activity.duyi-student-describe-item
                 .duyi-student-activity-left.duyi-student-describe-item-left
                 .duyi-student-activity-right.duyi-student-describe-item-right
@@ -58,8 +66,8 @@ block content
                     each activity, index in activityList
                         li(class={'duyi-student-activity-active': index === 0})
                 #duyi-student-activity-wrapper
-                    each activity in activityList
-                        .duyi-student-activity-item
+                    each activity, index in activityList
+                        .duyi-student-activity-item(style={display: index === 0 ? 'block' : 'none'})
                             .duyi-student-activity-photo
                                 img(src=`${activity.img}`)
                             .duyi-student-activity-right-wrapper
@@ -69,16 +77,16 @@ block content
 
         section.duyi-student-production
             .duyi-student-production-wrapper
-                //- #duyi-student-production-ps
-                    //- each production in productionList
-                .duyi-student-production-row
-                    .duyi-student-production-left
-                        img(src="http://p6alxlphh.bkt.clouddn.com/picture3.png")
-                    .duyi-student-production-right
-                        p.duyi-student-production-right-title 1
-                        div.duyi-dom-translate
-                            p.duyi-student-production-p-fir sadada
-                            p.duyi-student-production-p-sec sadadad
+                #duyi-student-production-ps-wrapper
+                    each production, index in productionList 
+                        .duyi-student-production-row(style={display: index === 0 ? 'block' : 'none'})
+                            .duyi-student-production-left
+                                img(src=`${production.img}`)
+                            .duyi-student-production-right
+                                p.duyi-student-production-right-title #{production.title}
+                                div.duyi-dom-translate
+                                    p.duyi-student-production-p-fir #{production.fir}
+                                    p.duyi-student-production-p-sec #{production.sec}
                 .duyi-student-production-dial.duyi-dom-translate
                     .duyi-student-production-dial-wrapper
                         div

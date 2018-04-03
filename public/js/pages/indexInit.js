@@ -1,5 +1,6 @@
 import PhotoApp from '../imageShow.js';
 import PosterMove from '../posterMove.js';
+import '../includes/jquery-rebox';
 
 export default function () {
     let $teacherWrapper = $('.duyi-teacher-wrapper'),
@@ -16,5 +17,6 @@ export default function () {
     });
 
     // 图片放大
-    new PhotoApp();
+    // new PhotoApp();
+    $('.duyi-student-photo').rebox({ selector: 'a' })    
 }

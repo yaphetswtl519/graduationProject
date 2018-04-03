@@ -10,25 +10,28 @@ block content
       .carousel-inner
         .item.active
           .duyi-carousel-img
+            img(src="http://p6alxlphh.bkt.clouddn.com/carousel/banner.png")
         .item
           .duyi-carousel-img
+            img(src="http://p6alxlphh.bkt.clouddn.com/carousel/banner.png")
         .item
           .duyi-carousel-img
+            img(src="http://p6alxlphh.bkt.clouddn.com/carousel/banner.png")
       a.carousel-control.duyi-carousel-left(href="#duyi-carousel" data-slide="prev")
       a.carousel-control.duyi-carousel-right(href="#duyi-carousel" data-slide="next")
     
     section.duyi-student-show
-      .duyi-student-title.container.duyi-dom-translate
+      .duyi-student-title.container
         h2 优秀学员俱乐部
         span
         h3 25w--45w年薪
-      .duyi-student-photo.duyi-dom-translate
+      .duyi-student-photo
         each student, index in studentInfo
-          if index % 4 === 0
-            .duyi-student-photo-row
-              each count in [0, 1, 2, 3]
-                .duyi-student-photo-img
-                  img.duyi-student-photo-image(src=`${studentInfo[index+count].imgUrl}`)
+          //- if index % 4 === 0
+            //- .duyi-student-photo-row(id=`duyi-student-photo-row-${index}`)
+          //- each count in [0, 1, 2, 3]
+          a.duyi-student-photo-img(href=`${student.imgUrl}`)
+            img.duyi-student-photo-image(src=`${student.imgUrl}`)
 
     section.duyi-tencent
       .container.duyi-dom-translate
@@ -50,10 +53,10 @@ block content
         p 业界名师 卓尔不凡
         span
         p 来自互联网公司的大咖亲自授课，祝你圆梦IT
-      each itemq in [0, 1, 2]
-        .duyi-teacher-detail
-          each item in [0, 1]
-            .duyi-teacher-wrapper.duyi-dom-translate
+      each itemq in [0, 1]
+        .duyi-teacher-detail.duyi-dom-translate
+          each item in [0, 1, 2, 3]
+            .duyi-teacher-wrapper
               .duyi-teacher-box
                 .duyi-teacher-photo
                   span.duyi-teacher-border
