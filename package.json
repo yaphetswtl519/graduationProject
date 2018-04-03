@@ -23,6 +23,7 @@
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "morgan": "~1.9.0",
+    "move-js": "^0.5.0",
     "pug": "^2.0.1",
     "serve-favicon": "~2.4.5",
     "style-loader": "^0.20.3",

@@ -12,12 +12,12 @@ export default class PosterMove {
         this.bindEvent();        
     }
     bindEvent () {
-        let $this = this;
-        let animationFrame;
-        let transitionCoordinates = {
-            x: 0,
-            y: 0
-        };
+        let $this = this,
+            animationFrame,
+            transitionCoordinates = {
+                x: 0,
+                y: 0
+            };
         let animationFunc = () => {
             transitionCoordinates.x += +($this.targetCoordinates.x - transitionCoordinates.x) / $this.options.speed;
             transitionCoordinates.y += +($this.targetCoordinates.y - transitionCoordinates.y) / $this.options.speed;
@@ -41,17 +41,17 @@ export default class PosterMove {
         };
         
         $this.$wrapper.on('mousemove', function (e) {
-            let centerCoordinates = $this.getCenterCoordinates(this);
-            let imgOffset = $this.$wrapper.find('.duyi-teacher-img').offset();
-            let boundary = {
-                x: $(this).offset().left + $this.padding + $this.options.boundaryOffset.x,
-                y: imgOffset.top - $(this).offset().top + $this.options.boundaryOffset.y
-            };
-            let bdSymbol = $this.symbol(e, centerCoordinates, boundary);
-            let dis = {
-                x: Math.abs(bdSymbol.origin.x) > boundary.x ? bdSymbol.x : bdSymbol.origin.x,
-                y: Math.abs(bdSymbol.origin.y) > boundary.y ? bdSymbol.y : bdSymbol.origin.y
-            };
+            let centerCoordinates = $this.getCenterCoordinates(this),
+                imgOffset = $this.$wrapper.find('.duyi-teacher-img').offset(),
+                boundary = {
+                    x: $(this).offset().left + $this.padding + $this.options.boundaryOffset.x,
+                    y: imgOffset.top - $(this).offset().top + $this.options.boundaryOffset.y
+                },
+                bdSymbol = $this.symbol(e, centerCoordinates, boundary),
+                dis = {
+                    x: Math.abs(bdSymbol.origin.x) > boundary.x ? bdSymbol.x : bdSymbol.origin.x,
+                    y: Math.abs(bdSymbol.origin.y) > boundary.y ? bdSymbol.y : bdSymbol.origin.y
+                };
             $this.targetCoordinates = {
                 x: dis.x * $this.options.movement,
                 y: dis.y * $this.options.movement

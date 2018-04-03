@@ -21,7 +21,8 @@ router.get('/study', (req, res, next) => {
     if (err) throw err;
     studyData = JSON.parse(studyData);
     res.render('study', {
-      lessons: studyData
+      lessons: studyData.lessons,
+      exercises: studyData.exercises
     });
   });
 });
@@ -32,7 +33,9 @@ router.get('/student', (req, res, next) => {
     if (err) throw err;
     studentData = JSON.parse(studentData);
     res.render('student', {
-      employmentList: studentData
+      employmentList: studentData.employmentList,
+      activityList: studentData.activityList,
+      productionList: studentData.productionList
     });
   });
 });

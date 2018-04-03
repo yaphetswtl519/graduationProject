@@ -1,176 +1,226 @@
-[
-    [
+{
+    "employmentList": [
+        [
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            }
+        ],
+        [
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            }
+        ],
+        [
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            },
+            {
+                "name": "刘飞翔",
+                "sex": "男",
+                "school": "哈尔滨理工大学",
+                "company": "今日头条",
+                "salary": "41.5w"
+            }
+        ]
+    ],
+    "activityList": [
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture2.png",
+            "top": "sadadadnkashndkiahikdhailapskdapakpdakpk",
+            "bottom": "素质拓展活动"
         },
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture2.png",
+            "top": "sadadadnkashndkiahikdhailapskdapakpdakpk",
+            "bottom": "素质拓展活动"
         },
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture2.png",
+            "top": "sadadadnkashndkiahikdhailapskdapakpdakpk",
+            "bottom": "素质拓展活动"
         },
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture2.png",
+            "top": "sadadadnkashndkiahikdhailapskdapakpdakpk",
+            "bottom": "素质拓展活动"
         }
     ],
-    [
+    "productionList": [
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture3.png",
+            "title": "1",
+            "fir": "sadadakhdakihdiahi",
+            "sec": "ashdiauhdiuahidhaidhsaiuhisdhaih"
         },
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture3.png",
+            "title": "2",
+            "fir": "sadadakhdakihdiahi",
+            "sec": "ashdiauhdiuahidhaidhsaiuhisdhaih"
         },
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture3.png",
+            "title": "3",
+            "fir": "sadadakhdakihdiahi",
+            "sec": "ashdiauhdiuahidhaidhsaiuhisdhaih"
         },
         {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        }
-    ],
-    [
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
-        },
-        {
-            "name": "刘飞翔",
-            "sex": "男",
-            "school": "哈尔滨理工大学",
-            "company": "今日头条",
-            "salary": "41.5w"
+            "img": "http://p6alxlphh.bkt.clouddn.com/picture3.png",
+            "title": "4",
+            "fir": "sadadakhdakihdiahi",
+            "sec": "ashdiauhdiuahidhaidhsaiuhisdhaih"
         }
     ]
-]
+}

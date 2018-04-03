@@ -2,6 +2,19 @@
     .table {
         margin-bottom: 0;
     }
+    .duyi-study-gotop {
+        width: 60px;
+        height: 60px;
+        background-color: pink;
+        border-radius: 50%;
+        display: inline-block;
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+        z-index: 2;
+        opacity: 0;
+        transition: all 1s;
+    }
     .duyi-study-poster {
         font-size: 50px;
         .duyi-study-poster-title {
@@ -16,9 +29,16 @@
             }
             p:nth-child(2) {
                 margin-top: 2px;
-                font-family: PingFang;
+                font-family: PingFangM;
                 font-size: 16px;
                 color: #4e4e4e;
+            }
+            span {
+                display: block;
+                margin: 52px auto 0;
+                width: 20px;
+                height: 2px;
+                background: burlywood; 
             }
         }
         @media (max-width: 1500px) {
@@ -62,80 +82,105 @@
             text-align: center;
             cursor: pointer;
             .duyi-study-curriculum-title {
-                // display: none;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 font-size: 48px;
-                font-family: PingFang;
+                font-family: PingFangH;
                 transition: opacity .5s;
+            }
+            .duyi-study-curriculum-title:hover::after{
+                width: 100%;
             }
             .duyi-study-curriculum-title::after {
                 content: "";
                 width: 40px;
                 height: 2px;
-                background-color: red;
+                background-color: burlywood;
                 display: block;
                 margin: 20px auto 0;
+                transition: all 1s;
             }
         }
         .duyi-study-curriculum-web {
-            // width: 90vw;
             float: left;
-            background-color: #ccc;
+            background-color: #f4f4f4;
             div {
                 color: #282828;
                 right: 15vw;
             }
         }
         .duyi-study-curriculum-java {
-            // width: 10vw;
             float: right;
-            background-color: #4e4e4e;
+            background-color: #282828;
             div {
                 color: #fff;
                 left: 15vw;
             }
+        }
+        .duyi-study-curriculum-java-title::before {
+            content: "敬请期待";
+            font-size: 18px;
+            position: absolute;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .duyi-study-curriculum-web-detail-wrapper,
         .duyi-study-curriculum-java-detail-wrapper {
             width: 100%;
             margin: 0 auto;
             height: 100%;
-            padding: 10% 8% 5%;
+            padding: 10% 8% 5% 7%;
             display: none;
             opacity: 0;
             transition: opacity .5s;
             @media (max-width:1300px) {
-                .duyi-study-curriculum-web-detail:nth-child(1),
-                .duyi-study-curriculum-java-detail:nth-child(1) {
-                    width: 45%!important;
-                    margin-right: 10%!important;
-                }
                 .duyi-study-curriculum-web-detail:nth-child(2),
                 .duyi-study-curriculum-java-detail:nth-child(2) {
                     width: 45%!important;
-                    margin-right: 0!important;
+                    margin-right: 10%!important;
                 }
                 .duyi-study-curriculum-web-detail:nth-child(3),
-                .duyi-study-curriculum-java-detail:nth-child(3) {
+                .duyi-study-curriculum-java-detail:nth-child(4) {
+                    width: 45%!important;
+                    margin-right: 0!important;
+                }
+                .duyi-study-curriculum-web-detail:nth-child(4),
+                .duyi-study-curriculum-java-detail:nth-child(4) {
                     display: none!important;
                     width: 0!important;
                     height: 0!important;;
                 }
             }
             @media (max-width:850px) {
-                .duyi-study-curriculum-web-detail:nth-child(1),
-                .duyi-study-curriculum-java-detail:nth-child(1) {
+                .duyi-study-curriculum-web-detail:nth-child(2),
+                .duyi-study-curriculum-java-detail:nth-child(2) {
                     width: 100%!important;
                 }
-                .duyi-study-curriculum-web-detail:nth-child(2),
                 .duyi-study-curriculum-web-detail:nth-child(3),
-                .duyi-study-curriculum-java-detail:nth-child(2),
-                .duyi-study-curriculum-java-detail:nth-child(3) {
+                .duyi-study-curriculum-web-detail:nth-child(3),
+                .duyi-study-curriculum-java-detail:nth-child(4),
+                .duyi-study-curriculum-java-detail:nth-child(4) {
                     display: none!important;
                     width: 0!important;
                     height: 0!important;
+                }
+            }
+            .duyi-study-curriculum-web-index {
+                position: absolute;
+                display: inline-block;
+                left: 2.5%;
+                top: 50%;
+                transform: translateY(-50%);
+                li {
+                    width: 14px;
+                    height: 14px;
+                    background-color: #9b9b9b;
+                    margin-bottom: 14px;
+                }
+                .duyi-study-curriculum-web-index-active {
+                    background-color: #6eb6c7;
                 }
             }
             .duyi-study-curriculum-web-detail,
@@ -146,6 +191,7 @@
                 width: 30%;
                 height: 100%;
                 margin-right: 5%;
+                transition: opacity 1s;
                 li {
                     position: relative;
                     width: 100%;
@@ -161,7 +207,7 @@
                         text-align: left;
                         font-size: 14px;
                         font-weight: bold;
-                        font-family: PingFang;
+                        font-family: PingFangM;
                     }
                     p:nth-child(2) {
                         margin-top: 10px;
@@ -203,7 +249,7 @@
             p:nth-child(1) {
                 font-size: 48px;
                 font-weight: bold;
-                font-family: PingFang;
+                font-family: PingFangH;
                 color: #282828;
             }
             div {
@@ -248,32 +294,49 @@
                 white-space: nowrap;
                 position: relative;
                 padding-right: 20px;
-                width: 2600px;
+                width: 2400px;
                 .duyi-study-exercises-scroll-item {
-                    // margin-right: 128px;
                     margin-right: 4.16%;
-                    // border: 1px solid black;
-                    width: 15.3%;
-                    // height: 530px;
+                    width: 19.7%;
                     display: inline-block;
                     vertical-align: top;
                     .duyi-study-exercises-scroll-img {
-                        width: 370px;
-                        height: 370px;
-                        background: url(http://t10.baidu.com/it/u=3642122811,4183436585&fm=58&w=395&h=395&img.JPEG) no-repeat;
-                        background-size: cover;
+                        height: 430px;
+                        img {
+                            width: 470px;
+                            height: 100%;
+                        }
                     }
                     .duyi-study-exercises-scroll-info {
                         margin-top: 35px;
-                        font-family: PingFang;                        
+                        font-family: PingFang;
+                        position: relative;                     
                         p {
                             font-size: 22px;
                             color: #242424;
                             font-weight: bold;
+                            text-indent: -13px;
                         }
-                        div {
+                        .duyi-study-exercises-describe {
                             font-size: 12px;
                             color: #747474;
+                        }
+                        .duyi-study-exercises-star {
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 4px;
+                            right: 0;
+                            height: 20px;
+                            span {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                background-size: contain;
+                                margin-right: 5px;
+                            }
+                            span:nth-child(4) {
+                                margin-right: 0;
+                            }
                         }
                     }
                 }
@@ -288,13 +351,12 @@
         .duyi-study-consult-title {
             width: 100vw;
             position: relative;
-            // top: 10%;
             margin-top: 5vw;
             text-align: center;
             p {
                 font-size: 48px;
                 font-weight: bold;
-                font-family: PingFang;
+                font-family: PingFangH;
                 color: #282828;
             }
             span {
@@ -341,7 +403,7 @@
                     position: relative;
                     width: 100%;
                     height: 480px;
-                    background-color: #ccc;
+                    background-color: #f4f4f4;
                     .duyi-study-consult-way-wechat-photo,
                     .duyi-study-consult-way-phone-photo,
                     .duyi-study-consult-way-online-photo {
@@ -409,7 +471,7 @@
             padding: 0 10vw;
             width: 100vw;
             height: 563px;
-            background-color: #2e3037;
+            background-color: #222;
             font-family: PingFang;
             margin-top: 130px;
             .duyi-study-main-footer {
@@ -441,6 +503,7 @@
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 9;
                         display: -webkit-box;
+                        font-family: PingFangL;
                     }
                 }
                 .duyi-study-footer-categories {
@@ -471,6 +534,7 @@
                                 height: 144px;
                             }
                             p {
+                                font-family: PingFangL;
                                 margin-top: 20px;
                             }
                         }
@@ -487,7 +551,7 @@
                 text-align: center;
                 font-size: 12px;
                 color: #fff;
-                background-color: #292c36;
+                background-color: #111;
                 p {
                     margin: 0;
                 }

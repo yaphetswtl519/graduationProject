@@ -2,10 +2,12 @@ extend studylayout
 
 block content
 	.duyi-content.duyi-study-fullpage
+		span.duyi-study-gotop
 		section.duyi-study-poster.section
 			.duyi-study-poster-title.container
 				p 零基础教学
 				p 渡一百分百保证毕业学员就业年薪10w+，达不到全额退还学费
+				span
 			.duyi-study-poster-img-wrapper
 				.duyi-study-poster-img
 
@@ -13,6 +15,9 @@ block content
 			.duyi-study-curriculum-web
 				.duyi-study-curriculum-web-title.duyi-study-curriculum-title 前端课程
 				.duyi-study-curriculum-web-detail-wrapper
+					ul.duyi-study-curriculum-web-index
+						each lesson, ind in lessons[0]
+							li(class={'duyi-study-curriculum-web-index-active': ind === 0})
 					each lesson, ind in lessons
 						ul.duyi-study-curriculum-web-detail(id=`webslide${ind}`)
 							each item, index in lesson
@@ -42,14 +47,22 @@ block content
 				p Drag for more
 			.duyi-study-exercises-content
 				.duyi-study-exercises-scroll-wrapper
-					each item in [0,1,2,3,4]
+					each item in exercises
 						.duyi-study-exercises-scroll-item
 							.duyi-study-exercises-scroll-img
+								img(src=`${item.img}`)
 							.duyi-study-exercises-scroll-info
-								p [html基础练习]
-								div 
-									span sdjaijdiajdijasildjaljdlajljl
-					
+								p #{item.title}
+								div.duyi-study-exercises-describe
+									span #{item.describe}
+								div.duyi-study-exercises-star
+									each star in item.star
+										if star == 0
+											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/dark-star.png) no-repeat`)
+										else if star == 1
+											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/half-star.png) no-repeat`)
+										else
+											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/star.png) no-repeat`)
 		section.duyi-study-consult.section
 			.duyi-study-consult-title
 				p 咨询课程

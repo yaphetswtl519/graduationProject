@@ -8,25 +8,25 @@ import '../css/study.less';
 import '../css/student.less';
 import '../css/about.less';
 
+import pageInit from  './pages/pageInit';
 import headerInit from './pages/headerInit';
 import indexInit from './pages/indexInit';
 import studyInit from './pages/studyInit';
 import studentInit from './pages/studentInit';
+import aboutInit from './pages/aboutInit';
 
 window.onload = () => {
+    // 元素translate
+    pageInit();
+    // header
     headerInit();
+
     if (window.location.pathname === '/study') {
         studyInit.init();
     } else if (window.location.pathname === '/student') {
         studentInit();
     } else if (window.location.pathname === '/about') {
-        let map = new BMap.Map("duyi-about-map-container");
-        let point = new BMap.Point(126.65771686,45.77322463);
-        let marker = new BMap.Marker(point);
-        map.centerAndZoom(point, 17);
-        map.enableScrollWheelZoom(true);
-	    map.addOverlay(marker);
-	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+       aboutInit();
     } else {    
         // 解决carousel和jquery.fullPage.css冲突
         $('#duyi-carousel').css('float', 'none');  

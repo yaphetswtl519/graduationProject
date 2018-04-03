@@ -1,5 +1,5 @@
 export default class DialRotate {
-    constructor (options = {}) {
+    constructor (options = {}, callback = () => {}) {
         this.defaults = {
             trigger: document,
             centerX: 0,
@@ -25,6 +25,7 @@ export default class DialRotate {
         this.flag = 1;
         this.curTime = 0;
         this.ops = Object.assign(this.defaults, options);
+        this.callback = callback;
 
         this.rotateDis = 0
         this.init();
@@ -53,6 +54,7 @@ export default class DialRotate {
                 let spare = this.rotateDis % 30,
                 spareDis = null;
                 if (spare === 0) {
+                    this.callback.call(this, this.getmatrix() / 30);
                     return;
                 } else {
                     spareDis = spare >= 15 ? (30 - spare) : -spare;
@@ -69,9 +71,8 @@ export default class DialRotate {
             if (dis === degree) {
                 clearInterval(_this.timer);
                 _this.rotateDis += dis;
-
-                let arr = [1,2,3,4,5,6,7,8,9,10,11,12];
-                $('.duyi-student-production-left').text(arr[_this.getmatrix() / 30])
+                // 执行回调函数
+                _this.callback.call(this, _this.getmatrix() / 30);
             } else {
                 dis > 0 ? degree++ : degree--;
                 _this.rotate(matrix + degree);
@@ -86,11 +87,7 @@ export default class DialRotate {
         }
         this.cur = dis;
         this.rotate(this.rotateDis + dis);
-       
-        let arr = [1,2,3,4,5,6,7,8,9,10,11,12];
-        if (this.getmatrix() % 30 >= 0 && this.getmatrix() % 30 < 15 ) {
-            $('.duyi-student-production-left').text(arr[Math.floor(this.getmatrix() / 30)])
-        }
+    
         return false;
     }
     angle (centerx, centery, endx, endy) {

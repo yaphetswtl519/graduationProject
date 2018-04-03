@@ -5,18 +5,19 @@ import '../includes/jquery.slimscroll';
 
 export default {
     myscroll: null,
+    pageSwitchCache: [],
     changeImageRatio () {
-        let $posterImg = $('.duyi-study-poster-img')
-        let url = $posterImg
-            .css('backgroundImage')
-            .replace(/^url\(["']?/, '')
-            .replace(/["']?\)$/, '');
-        let img = new Image();
+        let $posterImg = $('.duyi-study-poster-img'),
+            url = $posterImg
+                .css('backgroundImage')
+                .replace(/^url\(["']?/, '')
+                .replace(/["']?\)$/, ''),
+            img = new Image();
         img.src = url;
         img.onload = () => {
-            let ratio = img.width / img.height;
-            let width = $posterImg.width();
-            let height = $posterImg.height();
+            let ratio = img.width / img.height,
+                width = $posterImg.width(),
+                height = $posterImg.height();
             $posterImg.css({
                 height: parseInt(width / ratio)
             });
@@ -69,6 +70,7 @@ export default {
         return this;
     },
     init () {
+        let $this = this;
         // 解决fullpage插件对于高度计算不准确的问题
         $('html').addClass('fullpageHeight');
 
@@ -77,7 +79,7 @@ export default {
             .css('position', 'absolute');
         $('.duyi-header-button').remove();
 
-        this.changeImageRatio();                 
+        this.changeImageRatio();
         
         // 初始化iscroll组件
         this.myscroll = new IScroll('.duyi-study-exercises-content', {
@@ -87,10 +89,19 @@ export default {
 
         // 初始化fullpage组件
         $('.duyi-study-fullpage').fullpage({
-            // loopBottom: true,
-            // loopTop: true,
             scrollOverflow: true,
             afterLoad: (anchorLink, index) => {
+                if (index !== 1) {
+                    $('.duyi-study-gotop').css({
+                        opacity: 1
+                    }).on('click', () => {
+                        $('.duyi-study-fullpage').fullpage.moveTo(1, 0);
+                    });
+                } else {
+                    $('.duyi-study-gotop').css({
+                        opacity: 0
+                    });
+                }
                 if (index === 4) {
                     // 触发最后一页的slimScroll滚动条的加载
                     $(window).trigger('resize');
@@ -109,17 +120,44 @@ export default {
         $('.duyi-study-curriculum-web-detail')
             .add($('.duyi-study-curriculum-java-detail'))
             .each((index, item) => {
-                new pageSwitch($(item).attr('id'), {
+                $this.pageSwitchCache.push(new pageSwitch($(item).attr('id'), {
                     duration: 1000,
                     start: 0,
                     direction: 1,
                     loop: false,
                     ease: 'ease',
                     transition: 'slide',
-                    mouse: true,
+                    mouse: false,
                     arrowkey: false
+                }));
+            });
+        
+        // index icon切换
+        $('.duyi-study-curriculum-web-index li').on('click', function () {
+            let self = $(this),
+                i = self.index();
+            if (i !== 0) {
+                $('.duyi-study-curriculum-web-detail').each((index, item) => {
+                    if ($(item).children().length === 1) {
+                        $(item).css({
+                            opacity: 0
+                        });
+                    }
+                });
+            } else {
+                $('.duyi-study-curriculum-web-detail').css({
+                    opacity: 1
+                });
+            }
+            $this.pageSwitchCache.forEach((item, index) => {
+                item.slide(i);
+                item.on('after', () => {
+                    $('.duyi-study-curriculum-web-index li').removeClass('duyi-study-curriculum-web-index-active');
+                    self.addClass('duyi-study-curriculum-web-index-active');
                 });
             });
+            
+        });
 
         // 初始化curriculumAnimate
         this.curriculumAnimate({
@@ -128,14 +166,14 @@ export default {
             gap: {
                 left: '-1.6vw'
             }
-        }).curriculumAnimate({
-            origin: 'java',
-            target: 'web',
-            gap: {
-                right: '-1vw'
-            }
         });
-
-
+        // java课程后续开放
+        // .curriculumAnimate({
+        //     origin: 'java',
+        //     target: 'web',
+        //     gap: {
+        //         right: '-1vw'
+        //     }
+        // });
     }
 };
