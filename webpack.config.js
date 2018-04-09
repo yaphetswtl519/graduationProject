@@ -6,7 +6,8 @@ const uglify = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: {
         index: './public/js/index.js',
-        cssIndex: './public/js/cssIndex.js'
+        cssIndex: './public/js/cssIndex.js',
+        studyCssIndex: './public/js/studyCssIndex.js'
     },
     output: {
         path: path.resolve(process.cwd(), 'build/'),

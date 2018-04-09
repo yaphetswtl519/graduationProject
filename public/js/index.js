@@ -1,3 +1,6 @@
+import 'bootstrap/dist/js/bootstrap.min.js'
+import './includes/jquery-ui';
+
 import pageInit from  './pages/pageInit';
 import headerInit from './pages/headerInit';
 import indexInit from './pages/indexInit';
