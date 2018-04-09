@@ -50,18 +50,18 @@ block content
         p 业界名师 卓尔不凡
         span
         p 来自互联网公司的大咖亲自授课，祝你圆梦IT
-      each itemq in [0, 1]
+      each teacher in teacherInfo
         .duyi-teacher-detail.duyi-dom-translate
-          each item in [0, 1, 2, 3]
+          each item in teacher
             .duyi-teacher-wrapper
               .duyi-teacher-box
                 .duyi-teacher-photo
                   span.duyi-teacher-border
-                  img.duyi-teacher-img(src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODIK/9sAQwAGBAQFBAQGBQUFBgYGBwkOCQkICAkSDQ0KDhUSFhYVEhQUFxohHBcYHxkUFB0nHR8iIyUlJRYcKSwoJCshJCUk/9sAQwEGBgYJCAkRCQkRJBgUGCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQk/8AAEQgAKQAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A4Xw5dyeIpILgRhYrPcWcdJHYYGPTAJz74roZLZZFKsoKngg965vwK2naRpstxPqtsTd3HkqucKCoGBk9Tz245rrPOjaR41YFo8bh6Z6V9fg6rlTTk9Xv/XoefJWdinFp8NumyGJI164UAZoa39qts9Rs4rsiyTgZvh/4msLaG8Oi3rwQlZAJYSq7hjJK/pz6V0/h3TtX1GwvtYnuUs7uUGPY8QUNsXqAe+Onr0x0r0O3vbm2vru+1PUft9nKzslssW3ygQRjPfrn/OK8sstY1Lw7rrCW4kaIt5gjMm9WGef5HrX57TxlSn7t2vM9WdCC956m74cGs3Amt9YsXW4jcbXRMKU9SemM9xxWtqFnLpsYluNPvjG3R47d5Bj1yoIxWt4rWLV9IFzasfMaIOpXqVIz/KvNYLPXNZjZbO5kvWWEMU8wEKAM/MCcGvajmlWklGWvn/TOOVFPY9QiicP880Lg/eAQ/wCNNl0zS42WebT7e4kU4V5oVJUfiOlXj98/U1HL9xfrXKoqx0tlpDaOjKlvHuQFdo5QH6dq5xrZ9Eurm90extrW+mQJISmEdRg7QeAM4/XrWnp/+qn/AOuq1YufvfgKUP3isxTjyvQ//9k=")
+                  img.duyi-teacher-img(src=`${item.imgUrl}`)
                 .duyi-teacher-info
-                  p 姬成
-                    span 渡一教育首席讲师
-                  p 渡一科技教育公司成立于2007年，后经几轮兼并收购，成立渡一信息技术开发有限公司，下设渡一教育品牌。公司核心业务包含科技类外包，IT教育培训等业务。    
+                  p #{item.name}
+                    span #{item.job}
+                  p #{item.detail}
                
     section.duyi-cooperation
       .duyi-cooperation-title.container.duyi-dom-translate

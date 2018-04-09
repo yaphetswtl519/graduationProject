@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
     res.render('index', {
       title: 'duyi',
       studentInfo: indexData.student,
+      teacherInfo: indexData.teacher,
       cooperationInfo: indexData.cooperation
     });
   });
