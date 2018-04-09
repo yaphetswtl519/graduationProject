@@ -5,6 +5,7 @@ block content
         section.duyi-student-employment
             .duyi-student-employment-title.container
                 p 学员就业榜
+                span
                 p Student Employment list
                 p sdadadiajdsajdijaidjoaj
                 .duyi-student-employment-arrow
@@ -17,7 +18,7 @@ block content
                                 each item in employment
                                     li.duyi-student-employment-li
                                         if item.name.length === 2                                    
-                                            span #{item.name[0]}&nbsp;&nbsp;&nbsp;&nbsp;#{item.name[1]}
+                                            span #{item.name[0]}&nbsp;&nbsp;&nbsp;#{item.name[1]}
                                         else
                                             span #{item.name}
                                         span #{item.sex}

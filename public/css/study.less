@@ -3,14 +3,13 @@
         margin-bottom: 0;
     }
     .duyi-study-gotop {
-        width: 60px;
-        height: 60px;
-        background-color: pink;
-        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        background: url('../images/gotop.png') no-repeat;
         display: inline-block;
         position: fixed;
-        right: 100px;
-        bottom: 100px;
+        right: 60px;
+        bottom: 60px;
         z-index: 2;
         opacity: 0;
         transition: all 1s;
@@ -23,9 +22,9 @@
             width: 100vw;
             text-align: center;
             p:nth-child(1) {
-                font-size: 48px;
-                font-weight: bold;
-                color: #282828;
+                font-size: 62px;
+                color: #222;
+                font-family: PingFangB;
             }
             p:nth-child(2) {
                 margin-top: 2px;
@@ -38,7 +37,7 @@
                 margin: 52px auto 0;
                 width: 20px;
                 height: 2px;
-                background: burlywood; 
+                background: #be926f; 
             }
         }
         @media (max-width: 1500px) {
@@ -96,7 +95,7 @@
                 content: "";
                 width: 40px;
                 height: 2px;
-                background-color: burlywood;
+                background-color: #be926f;
                 display: block;
                 margin: 20px auto 0;
                 transition: all 1s;
@@ -120,7 +119,9 @@
         }
         .duyi-study-curriculum-java-title::before {
             content: "敬请期待";
-            font-size: 18px;
+            font-size: 20px;
+            font-family: PingFangM;
+            color: #fff;
             position: absolute;
             top: -38px;
             left: 50%;
@@ -206,7 +207,6 @@
                     p {
                         text-align: left;
                         font-size: 14px;
-                        font-weight: bold;
                         font-family: PingFangM;
                     }
                     p:nth-child(2) {
@@ -248,9 +248,8 @@
             text-align: center;
             p:nth-child(1) {
                 font-size: 48px;
-                font-weight: bold;
                 font-family: PingFangH;
-                color: #282828;
+                color: #222;
             }
             div {
                 background: url('../images/handdrag-line.png') no-repeat 50% 0 / contain;
@@ -279,9 +278,8 @@
             }
             p:nth-child(3) {
                 font-size: 22px;
-                font-family: PingFang;
+                font-family: STX;
                 color: #6a6969;
-                font-weight: bold;
             }
         }
         .duyi-study-exercises-content {
@@ -309,15 +307,15 @@
                     }
                     .duyi-study-exercises-scroll-info {
                         margin-top: 35px;
-                        font-family: PingFang;
                         position: relative;                     
                         p {
                             font-size: 22px;
                             color: #242424;
-                            font-weight: bold;
                             text-indent: -13px;
+                            font-family: STX;
                         }
                         .duyi-study-exercises-describe {
+                            font-family: PingFangM;
                             font-size: 12px;
                             color: #747474;
                         }
@@ -354,17 +352,16 @@
             margin-top: 5vw;
             text-align: center;
             p {
-                font-size: 48px;
-                font-weight: bold;
+                font-size: 50px;
                 font-family: PingFangH;
-                color: #282828;
+                color: #222;
             }
             span {
                 display: block;
                 width: 20px;
                 height: 2px;
                 margin: 38px auto 0;
-                background-color: burlywood;
+                background-color: #be926f;
             }
         }
         @media (max-width:1400px) {
@@ -454,9 +451,10 @@
                     }
                 }
                 p {
-                    color: #282828;
+                    color: #222;
                     margin-top: 32px;
-                    font-size: 25px;
+                    font-size: 24px;
+                    font-family: STX;
                     text-align: center;
                 }
             }
@@ -472,7 +470,6 @@
             width: 100vw;
             height: 563px;
             background-color: #222;
-            font-family: PingFang;
             margin-top: 130px;
             .duyi-study-main-footer {
                 height: 481px;
@@ -494,7 +491,7 @@
                     }
                     p:nth-child(1) {
                         padding-bottom: 10px;
-                        font-weight: bold;
+                        font-family: STX;
                     }
                     p:nth-child(2) {
                         line-height: 22px;
@@ -508,6 +505,7 @@
                 }
                 .duyi-study-footer-categories {
                     width: 16vw;
+                    font-family: STX;
                     p {
                         font-size: 16px;
                     }
@@ -517,6 +515,7 @@
                             display: block;
                             height: 36px;
                             line-height: 36px;
+                            color: #e9e9e9;
                         }
                     }
                 }
@@ -529,9 +528,11 @@
                             width: 25%;
                             margin-right: 4%;
                             div {
-                                background: url(../images/wechat-qrcode.png) no-repeat 50% 0 / contain;
+                                background: url(http://p6alxlphh.bkt.clouddn.com/%E5%B0%8F%E6%B8%A1%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
                                 width: 100%;
-                                height: 144px;
+                                height: 140px;
                             }
                             p {
                                 font-family: PingFangL;
@@ -549,10 +550,12 @@
                 height: 82px;
                 line-height: 82px;
                 text-align: center;
-                font-size: 12px;
+                font-size: 14px;
                 color: #fff;
                 background-color: #111;
+                font-family: STX;
                 p {
+                    opacity: .6;
                     margin: 0;
                 }
             }

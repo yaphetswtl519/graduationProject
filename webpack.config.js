@@ -1,6 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const uglify = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -15,8 +16,8 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery"
-        })
-        // new ExtractTextPlugin('index.css')
+        }),
+        new uglify()
     ],
     module: {
         loaders: [

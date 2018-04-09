@@ -28,10 +28,6 @@ html {
             text-decoration: none;
         }
         @font-face {
-            font-family: 'PingFang';
-            src: url('../font/PingFang Regular.ttf');
-        }
-        @font-face {
             font-family: 'PingFangH';
             src: url('../font/PingFang Heavy.ttf');
         }
@@ -46,6 +42,10 @@ html {
         @font-face {
             font-family: 'PingFangB';
             src: url('../font/PingFang Bold.ttf');
+        }
+        @font-face {
+            font-family: 'STX';
+            src: url('../font/STXIHEI.ttf');
         }
         @media (max-width: 1200px) {
             .duyi-footer {
@@ -265,7 +265,6 @@ html {
             min-width: 1300px;
             background-color: #222;
             height: 563px;
-            font-family: PingFang;
             .duyi-main-footer {     
                 padding-top: 142px;
                 padding-bottom: 205px;
@@ -291,7 +290,7 @@ html {
                     }
                     p:nth-child(1) {
                         padding-bottom: 10px;
-                        font-weight: bold;
+                        font-family: STX;
                     }
                     p:nth-child(2) {
                         font-family: PingFangL;
@@ -300,6 +299,7 @@ html {
                 }
                 .duyi-footer-categories {
                     padding-left: 80px;
+                    font-family: STX;                    
                     p {
                         font-size: 16px;
                     }
@@ -309,6 +309,7 @@ html {
                             display: block;
                             height: 36px;
                             line-height: 36px;
+                            color: #e9e9e9;
                         }
                     }
                 }
@@ -326,6 +327,7 @@ html {
                 }
             }
             .duyi-copyright {
+                font-family: STX;
                 height: 82px;
                 line-height: 82px;
                 text-align: center;
@@ -352,7 +354,7 @@ html {
                         margin-right: 0;
                     }
                     .active {
-                        background-color: yellow;
+                        background-color: #f4ca38;
                     }
                 }
                 .carousel-inner {
@@ -383,7 +385,6 @@ html {
                 }
             }
             .duyi-student-show {
-                font-family: PingFang;
                 padding-top: 60px;
                 padding-bottom: 90px;
                 position: relative;
@@ -393,7 +394,7 @@ html {
                     h2 {
                         font-family: PingFangH;
                         font-size: 50px;
-                        color: #232323;
+                        color: #222;
                     }
                     span {
                         display: block;
@@ -405,7 +406,7 @@ html {
                     h3 {
                         font-family: PingFangM;                    
                         font-size: 24px;
-                        color: #232323;
+                        color: #222;
                     }
                 }
                 .duyi-student-photo {
@@ -480,6 +481,7 @@ html {
                             font-size: 20px;
                             height: 65px;
                             span {
+                                font-family: PingFangM;
                                 position: absolute;
                                 display: inline-block;
                                 left: 300px;
@@ -551,7 +553,7 @@ html {
                 .duyi-teacher-title {
                     text-align: center;
                     p {
-                        color: #242424;
+                        color: #222;
                     }
                     p:nth-child(1) {
                         font-family: PingFangH;
@@ -592,15 +594,15 @@ html {
                                     content: "";
                                     display: block;
                                     position: absolute;
-                                    left: 2.0832vw;
-                                    top: -2.0832vw;
-                                    width: 86%;
+                                    left: 50%;
+                                    margin-left: -115px;
+                                    top: -28px;
+                                    width: 230px;
                                     height: 100%;
-                                    border: 3px solid currentColor;
+                                    border: 2px solid #c8c8c8;
                                     box-sizing: border-box;
                                     z-index: 3;
                                     transform: translateZ(0);
-                                    display: none;
                                 }
                                 img {
                                     width: 288px;
@@ -616,7 +618,7 @@ html {
                                 p:nth-child(1) {
                                     font-family: PingFangM;
                                     font-size: 24px;
-                                    color: #242424;
+                                    color: #222;
                                     letter-spacing: .1em;
                                     text-transform: uppercase;
                                     span {
@@ -627,8 +629,8 @@ html {
                                 p:nth-child(2) {
                                     font-family: PingFangL;
                                     font-size: 12px;
-                                    line-height: 1.35;
-                                    color: #242424;
+                                    line-height: 18px;
+                                    color: #222;
                                 }
                             }
                             .duyi-teacher-info:before,
@@ -642,7 +644,7 @@ html {
                                 height: 100%;
                             }
                             .duyi-teacher-info::before {
-                                background: #d9d7da;                            
+                                background: #dcdcdc;                            
                             }
                             .duyi-teacher-info:after {
                                 background: #000;
@@ -661,6 +663,9 @@ html {
                     .duyi-teacher-wrapper:nth-child(4) {
                         width: 288px;
                         padding-right: 0;
+                        .duyi-teacher-border {
+                            margin-left: -93px!important;
+                        }
                     }
                 }
                 .duyi-teacher-detail:after {
@@ -673,26 +678,24 @@ html {
                 margin-bottom: 120px;
                 .duyi-cooperation-title {
                     text-align: center;
+                    color: #222;
                     p:nth-child(1) {
                         font-family: PingFangH;
                         font-size: 46px;
-                        color: #000;
                     }
                     p:nth-child(2) {
                         font-family: PingFangM;
-                        margin-top: 12px;
+                        margin-top: 27px;
                         font-size: 30px;
-                        color: #222;
                     }
                 }
-              
                 .duyi-cooperation-detail {
-                    width: 1284px;
-                    margin: 0 auto;
+                    width: 1164px;
+                    margin: 15px auto 0;
                     .duyi-cooperation-detail-row {
                         border-bottom: 1px solid #f5f5f5;
                         .duyi-cooperation-detail-img {
-                            width: 321px;
+                            width: 291px;
                             height: 118px;
                             float: left;
                             position: relative;
@@ -701,7 +704,7 @@ html {
                                 position: absolute;
                                 left: 0;
                                 top: 0;
-                                width: 320px;
+                                width: 290px;
                                 height: 118px;
                             }
                             .duyi-cooperation-img-dark {

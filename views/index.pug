@@ -27,9 +27,6 @@ block content
         h3 25w--45w年薪
       .duyi-student-photo
         each student, index in studentInfo
-          //- if index % 4 === 0
-            //- .duyi-student-photo-row(id=`duyi-student-photo-row-${index}`)
-          //- each count in [0, 1, 2, 3]
           a.duyi-student-photo-img(href=`${student.imgUrl}`)
             img.duyi-student-photo-image(src=`${student.imgUrl}`)
 
