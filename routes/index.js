@@ -18,6 +18,7 @@ router.get('/', (req, res, next) => {
 
 /* 课程学习页 */
 router.get('/study', (req, res, next) => {
+  console.log(req.headers['user-agent']);
   fs.readFile('public/json/study.json', 'utf8', (err, studyData) =>{
     if (err) throw err;
     studyData = JSON.parse(studyData);

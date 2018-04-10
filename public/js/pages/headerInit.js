@@ -19,7 +19,6 @@ export default function () {
     let toggleButton = () => {
         $header.removeClass(headerFSM.hide).addClass(headerFSM.show);
         $headerButton.removeClass(buttonFSM.show).addClass(buttonFSM.hide);        
-        // $headerLiLine.removeClass(headerLineFSM.hide).addClass(headerLineFSM.show);
         $headerLi.each((index, item) => {
             $(item).css({
                 transform: `translateX(0)`,
@@ -34,7 +33,6 @@ export default function () {
 
     let headerInit = () => {
         $header.removeClass(headerFSM.show).addClass(headerFSM.hide);
-        // $headerLiLine.removeClass(headerLineFSM.show).addClass(headerLineFSM.hide);
         $headerButton.removeClass(buttonFSM.hide).addClass(`${buttonFSM.transiton} ${buttonFSM.show}`);
         $headerLi.each((index, item) => {
             $(item).css({
@@ -47,8 +45,10 @@ export default function () {
     $(window).scroll((e) => {
         let scrollTop = $(window).scrollTop();
         if (scrollTop && scrollTop > 110) {
+            $header.css('position', 'fixed');                  
             headerInit();
         } else {
+            $header.css('position', 'absolute');        
             toggleButton();
         }
     });
