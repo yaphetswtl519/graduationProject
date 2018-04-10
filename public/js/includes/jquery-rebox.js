@@ -29,8 +29,25 @@
 		captionAttr: 'title',  // name of the attribute to grab the caption from
 		template: 'image',     // the default template to be used (see templates below)
 		templates: {           // define templates to create the elements you need function($item, settings)
-			image: function($item, settings, callback){ 
-				return $('<img src="'+ $item.attr('href') +'" class="'+ settings.theme +'-content" />');
+			image: function($item, settings, callback){
+				let studentInfo = $item.data('info');
+				let studentWrapper = `
+					<div class="rebox-student-wrapper">
+						<p class="rebox-student-name">${studentInfo.name}</p>
+						<p class="rebox-student-pd">Personal Data</p>
+						<div>
+							<span class="rebox-student-school">${studentInfo.school}</span>
+							<span class="rebox-student-major">${studentInfo.major}</span>
+							<span class="rebox-student-grade">${studentInfo.grade}</span>
+						</div>
+						<p class="rebox-student-company">就职公司：${studentInfo.company}</p>
+						<span class="rebox-student-line"></span>
+						<div>
+							<span class="rebox-student-salary">${studentInfo.salary}</span>年薪
+						</div>
+					</div>
+				`;
+				return $('<div class="duyi-student-info-wrapper"><img src="'+ $item.attr('href') +'" class="'+ settings.theme +'-content" /><div class="rebox-student-content-wrapper">' + studentWrapper + '</div></div>');
 			}
 		}
 	};

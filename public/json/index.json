@@ -1,40 +1,148 @@
 {
     "student": [
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/1%E5%88%98%E9%A3%9E%E7%BF%94.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/1%E5%88%98%E9%A3%9E%E7%BF%94.png",
+            "info": {
+                "name": "刘飞翔",
+                "sex": "男",
+                "company": "今日头条",
+                "salary": "40+W",
+                "school": "哈尔滨理工大学",
+                "major": "计算机科学与技术",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/2%E9%99%88%E5%BF%97%E7%85%8C.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/2%E9%99%88%E5%BF%97%E7%85%8C.png",
+            "info": {
+                "name": "陈志煌",
+                "sex": "男",
+                "company": "WAP",
+                "salary": "40+W",
+                "school": "哈尔滨理工大学",
+                "major": "测控技术与通信工程",
+                "grade": "12级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/3%E9%82%B5%E5%BE%B7%E5%A5%872.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/3%E9%82%B5%E5%BE%B7%E5%A5%872.png",
+            "info": {
+                "name": "邵德奇",
+                "sex": "男",
+                "company": "美团点评",
+                "salary": "21W",
+                "school": "哈尔滨理工大学",
+                "major": "自动化",
+                "grade": "12级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/4%E5%BC%A0%E5%AE%B6%E7%8E%AE.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/4%E5%BC%A0%E5%AE%B6%E7%8E%AE.png",
+            "info": {
+                "name": "张家玮",
+                "sex": "女",
+                "company": "今日头条",
+                "salary": "30+W",
+                "school": "哈尔滨理工大学",
+                "major": "计算机科学与技术",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/5%E6%9F%B3%E8%88%92%E8%8A%B3.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/5%E6%9F%B3%E8%88%92%E8%8A%B3.png",
+            "info": {
+                "name": "柳舒芳",
+                "sex": "男",
+                "company": "懂球帝",
+                "salary": "20W",
+                "school": "哈尔滨理工大学",
+                "major": "机械动力工程",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/6%E7%8E%8B%E5%A4%A9%E7%AB%8B2.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/6%E7%8E%8B%E5%A4%A9%E7%AB%8B2.png",
+            "info": {
+                "name": "王天立",
+                "sex": "男",
+                "company": "美团点评",
+                "salary": "23W",
+                "school": "黑龙江大学",
+                "major": "计算机科学与技术",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/7%E4%B8%9B%E5%9F%B9%E6%A3%AE.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/7%E4%B8%9B%E5%9F%B9%E6%A3%AE.png",
+            "info": {
+                "name": "丛培森",
+                "sex": "男",
+                "company": "百度",
+                "salary": "20W",
+                "school": "哈尔滨理工大学",
+                "major": "计算机科学与技术",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/8%E9%83%91%E9%BA%97%E5%A4%8F.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/8%E9%83%91%E9%BA%97%E5%A4%8F.png",
+            "info": {
+                "name": "郑麗夏",
+                "sex": "女",
+                "company": "便利蜂",
+                "salary": "19W",
+                "school": "黑龙江大学",
+                "major": "西语学院",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/9%E6%9B%B9%E5%B8%86.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/9%E6%9B%B9%E5%B8%86.png",
+            "info": {
+                "name": "曹帆",
+                "sex": "女",
+                "company": "便利蜂",
+                "salary": "19W",
+                "school": "哈尔滨理工大学",
+                "major": "测控技术",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/10%E5%AE%89%E6%B5%B7%E7%90%B4.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/10%E5%AE%89%E6%B5%B7%E7%90%B4.png",
+            "info": {
+                "name": "安海琴",
+                "sex": "女",
+                "company": "滴滴出行",
+                "salary": "23W",
+                "school": "哈尔滨理工大学",
+                "major": "安全工程",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/11%E5%B0%A4%E7%A1%95.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/11%E5%B0%A4%E7%A1%95.png",
+            "info": {
+                "name": "尤硕",
+                "sex": "女",
+                "company": "美团点评",
+                "salary": "23W",
+                "school": "黑龙江大学",
+                "major": "软件工程",
+                "grade": "14级"
+            }
         },
         {
-            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/12%E9%99%88%E5%86%A0%E6%BD%AE.png"
+            "imgUrl": "http://p6alxlphh.bkt.clouddn.com/duyistudent/12%E9%99%88%E5%86%A0%E6%BD%AE.png",
+            "info": {
+                "name": "陈冠潮",
+                "sex": "男",
+                "company": "滴滴出行",
+                "salary": "23W",
+                "school": "哈尔滨理工大学",
+                "major": "机械动力工程学院",
+                "grade": "14级"
+            }
         }
     ],
     "teacher": [

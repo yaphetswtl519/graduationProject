@@ -10,13 +10,13 @@ block content
       .carousel-inner
         .item.active
           .duyi-carousel-img
-            img(src="http://p6alxlphh.bkt.clouddn.com/carousel/banner.png")
+            img(src="http://p6alxlphh.bkt.clouddn.com/banner.png")
         .item
           .duyi-carousel-img
-            img(src="http://p6alxlphh.bkt.clouddn.com/carousel/banner.png")
+            img(src="http://p6alxlphh.bkt.clouddn.com/banner.png")
         .item
           .duyi-carousel-img
-            img(src="http://p6alxlphh.bkt.clouddn.com/carousel/banner.png")
+            img(src="http://p6alxlphh.bkt.clouddn.com/banner.png")
       a.carousel-control.duyi-carousel-left(href="#duyi-carousel" data-slide="prev")
       a.carousel-control.duyi-carousel-right(href="#duyi-carousel" data-slide="next")
     
@@ -27,7 +27,7 @@ block content
         h3 25w--45w年薪
       .duyi-student-photo
         each student, index in studentInfo
-          a.duyi-student-photo-img(href=`${student.imgUrl}`)
+          a.duyi-student-photo-img(href=`${student.imgUrl}`, data-info=`${JSON.stringify(student.info)}`)
             img.duyi-student-photo-image(src=`${student.imgUrl}`)
 
     section.duyi-tencent

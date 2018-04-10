@@ -5,6 +5,7 @@ import pageInit from  './pages/pageInit';
 import headerInit from './pages/headerInit';
 import indexInit from './pages/indexInit';
 import studyInit from './pages/studyInit';
+import studymobileInit from './pages/studymobileInit';
 import studentInit from './pages/studentInit';
 import aboutInit from './pages/aboutInit';
 
@@ -13,9 +14,12 @@ window.onload = () => {
     pageInit();
     // header
     headerInit();
-
     if (window.location.pathname === '/study') {
-        studyInit.init();
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            studymobileInit();
+        } else {
+            studyInit.init();
+        }
     } else if (window.location.pathname === '/student') {
         studentInit();
     } else if (window.location.pathname === '/about') {

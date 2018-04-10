@@ -44,7 +44,7 @@ export default function () {
     }
     $(window).scroll((e) => {
         let scrollTop = $(window).scrollTop();
-        if (scrollTop && scrollTop > 110) {
+        if (scrollTop && scrollTop > 90) {
             $header.css('position', 'fixed');                  
             headerInit();
         } else {
@@ -55,7 +55,7 @@ export default function () {
 
     // header初始化
     let scrollTop = $(window).scrollTop();
-    if (scrollTop && scrollTop > 110) {
+    if (scrollTop && scrollTop > 90) {
         headerInit();
     }
 }
