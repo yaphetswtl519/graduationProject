@@ -1,6 +1,7 @@
-import DialRotate from '../dialRotate';
-import pageSwitch from 'pageSwitch';
-import data from '../../json/student.json';
+import IScroll from 'iscroll/build/iscroll.js';
+// import DialRotate from '../dialRotate';
+// import pageSwitch from 'pageSwitch';
+// import data from '../../json/student.json';
 
 export default function () {
     // video 初始化
@@ -21,33 +22,38 @@ export default function () {
         $('.duyi-student-story-left-video-time').hide();
     });
 
-    let productionPS = new pageSwitch('duyi-student-production-ps-wrapper', Object.assign(defaultPSOptions, {
-        transition: 'flip3dX'
-    }));
+    // let productionPS = new pageSwitch('duyi-student-production-ps-wrapper', Object.assign(defaultPSOptions, {
+    //     transition: 'flip3dX'
+    // }));
+
+    new IScroll('.duyi-student-campus-content', {
+        scrollX: true,
+        scrollY: false
+    });
 
     // dial 初始化
-    new DialRotate({
-        debug: false,
-        inertia: false,
-        trigger: $('.duyi-student-production-dial-wrapper'),
-        wrapper: $('.duyi-student-production-dial-wrapper div')
-    }, (degree) => {
-        productionPS.slide(degree % 4);
-    });
+    // new DialRotate({
+    //     debug: false,
+    //     inertia: false,
+    //     trigger: $('.duyi-student-production-dial-wrapper'),
+    //     wrapper: $('.duyi-student-production-dial-wrapper div')
+    // }, (degree) => {
+    //     productionPS.slide(degree % 4);
+    // });
 
-    // activity pageSwitch 初始化
-    let activityPS = new pageSwitch('duyi-student-activity-wrapper', Object.assign(defaultPSOptions, {
-        transition: 'flip3dY'
-    }));
-    $('.duyi-student-activity-ul').on('click', (e) => {
-        let target = $(e.target),
-            ind = target.index();
-        if (!$(target).hasClass('duyi-student-activity-ul')) {
-            activityPS.slide(ind);
-            activityPS.on('after', () => {
-                $('.duyi-student-activity-ul li').removeClass('duyi-student-activity-active');
-                target.addClass('duyi-student-activity-active');
-            });
-        }
-    });
+    // // activity pageSwitch 初始化
+    // let activityPS = new pageSwitch('duyi-student-activity-wrapper', Object.assign(defaultPSOptions, {
+    //     transition: 'flip3dY'
+    // }));
+    // $('.duyi-student-activity-ul').on('click', (e) => {
+    //     let target = $(e.target),
+    //         ind = target.index();
+    //     if (!$(target).hasClass('duyi-student-activity-ul')) {
+    //         activityPS.slide(ind);
+    //         activityPS.on('after', () => {
+    //             $('.duyi-student-activity-ul li').removeClass('duyi-student-activity-active');
+    //             target.addClass('duyi-student-activity-active');
+    //         });
+    //     }
+    // });
 }

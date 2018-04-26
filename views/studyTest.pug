@@ -1,30 +1,34 @@
-extend layout
+extend studylayout
 
 block content
-	.duyi-content
-		section.duyi-study-poster
+	.duyi-content.duyi-study-fullpage
+		span.duyi-study-gotop
+		section.duyi-study-poster.section
 			.duyi-study-poster-title.container
 				p 零基础教学
 				p 渡一百分百保证毕业学员就业年薪10w+，达不到全额退还学费
 				span
 			.duyi-study-poster-img-wrapper
-				img(src="http://p6alxlphh.bkt.clouddn.com/study-banner.png")
-		section.duyi-study-curriculum
+				.duyi-study-poster-img
+
+		section.duyi-study-curriculum.section
 			.duyi-study-curriculum-web
-				.duyi-study-curriculum-web-title.duyi-study-curriculum-title.container 前端课程
-					span
+				.duyi-study-curriculum-web-title.duyi-study-curriculum-title 前端课程
 				.duyi-study-curriculum-web-detail-wrapper
+					ul.duyi-study-curriculum-web-index
+						each lesson, ind in lessons[0]
+							li(class={'duyi-study-curriculum-web-index-active': ind === 0})
 					each lesson, ind in lessons
 						ul.duyi-study-curriculum-web-detail(id=`webslide${ind}`)
 							each item, index in lesson
 								li
-									.duyi-study-curriculum-web-detail-img
+									.duyi-study-curriculum-web-detail-img(style="background-color: #bbb;")
 									p #{item.intro}
 									p
 										span.duyi-study-curriculum-author #{item.author}				
 
 			.duyi-study-curriculum-java
-				.duyi-study-curriculum-java-title.duyi-study-curriculum-title.container JAVA课程
+				.duyi-study-curriculum-java-title.duyi-study-curriculum-title JAVA课程
 				.duyi-study-curriculum-java-detail-wrapper
 					each lesson, ind in lessons
 						ul.duyi-study-curriculum-java-detail(id=`javaslide${ind}`)
@@ -35,8 +39,8 @@ block content
 									p
 										span.duyi-study-curriculum-author #{item.author}				
 
-		section.duyi-study-exercises
-			.duyi-study-exercises-title.container
+		section.duyi-study-exercises.section
+			.duyi-study-exercises-title
 				p 水平测试套题
 				div
 					img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
@@ -59,8 +63,8 @@ block content
 											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/half-star.png) no-repeat`)
 										else
 											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/star.png) no-repeat`)
-		section.duyi-study-consult
-			.duyi-study-consult-title.container
+		section.duyi-study-consult.section
+			.duyi-study-consult-title
 				p 咨询课程
 				span
 			.duyi-study-consult-way-row
@@ -81,3 +85,4 @@ block content
 						.duyi-study-consult-way-online-photo
 						a(href="#").duyi-study-consult-way-online-a
 					p Online
+			include includes/study-footer

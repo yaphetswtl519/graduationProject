@@ -1,73 +1,91 @@
-extend studylayout
+extend layout
 
 block content
-	.duyi-content.duyi-study-fullpage
-		span.duyi-study-gotop
-		section.duyi-study-poster.section
+	.duyi-content
+		section.duyi-study-poster
 			.duyi-study-poster-title.container
 				p 零基础教学
 				p 渡一百分百保证毕业学员就业年薪10w+，达不到全额退还学费
 				span
-			.duyi-study-poster-img-wrapper
-				.duyi-study-poster-img
-
-		section.duyi-study-curriculum.section
+			//- .duyi-study-poster-img-wrapper
+				img(src="http://p6alxlphh.bkt.clouddn.com/study-banner.png")
+		section.duyi-study-curriculum
 			.duyi-study-curriculum-web
-				.duyi-study-curriculum-web-title.duyi-study-curriculum-title 前端课程
-				.duyi-study-curriculum-web-detail-wrapper
-					ul.duyi-study-curriculum-web-index
-						each lesson, ind in lessons[0]
-							li(class={'duyi-study-curriculum-web-index-active': ind === 0})
-					each lesson, ind in lessons
-						ul.duyi-study-curriculum-web-detail(id=`webslide${ind}`)
-							each item, index in lesson
-								li
-									.duyi-study-curriculum-web-detail-img(style="background-color: #bbb;")
-									p #{item.intro}
-									p
-										span.duyi-study-curriculum-author #{item.author}				
+				.duyi-study-curriculum-web-title.duyi-study-curriculum-title
+					p 前端课程
+					div
+						img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
+					p The front course
+				.duyi-study-curriculum-web-content
+					.duyi-study-curriculum-web-scroll-wrapper
+						each lesson in lessons
+							.duyi-study-curriculum-web-scroll-item
+								.duyi-study-curriculum-web-scroll-img
+									img(src=`${lesson.img}`)
+								a(href=`${lesson.link}`)
+									.duyi-study-curriculum-web-scroll-info
+										p #{lesson.title}
+										div
+											span 讲师：#{lesson.teacher}
+											span 好评#{lesson.per}
+				//- .duyi-study-curriculum-web-detail-wrapper
+				//- 	each lesson, ind in lessons
+				//- 		ul.duyi-study-curriculum-web-detail(id=`webslide${ind}`)
+				//- 			each item, index in lesson
+				//- 				li
+				//- 					.duyi-study-curriculum-web-detail-img
+				//- 					p #{item.intro}
+				//- 					p
+				//- 						span.duyi-study-curriculum-author #{item.author}				
 
-			.duyi-study-curriculum-java
-				.duyi-study-curriculum-java-title.duyi-study-curriculum-title JAVA课程
-				.duyi-study-curriculum-java-detail-wrapper
-					each lesson, ind in lessons
-						ul.duyi-study-curriculum-java-detail(id=`javaslide${ind}`)
-							each item, index in lesson
-								li
-									.duyi-study-curriculum-java-detail-img(style="background-color: #bbb;")
-									p #{item.intro}
-									p
-										span.duyi-study-curriculum-author #{item.author}				
+			//- .duyi-study-curriculum-java
+			//- 	.duyi-study-curriculum-java-title.duyi-study-curriculum-title.container JAVA课程
+			//- 	.duyi-study-curriculum-java-detail-wrapper
+			//- 		each lesson, ind in lessons
+			//- 			ul.duyi-study-curriculum-java-detail(id=`javaslide${ind}`)
+			//- 				each item, index in lesson
+			//- 					li
+			//- 						.duyi-study-curriculum-java-detail-img(style="background-color: #bbb;")
+			//- 						p #{item.intro}
+			//- 						p
+			//- 							span.duyi-study-curriculum-author #{item.author}
+			.duyi-study-curriculum-java.duyi-dom-translate
+				p UPDATING
+				P JAVA课程
+				p 敬请期待
+								
 
-		section.duyi-study-exercises.section
-			.duyi-study-exercises-title
+		section.duyi-study-exercises
+			.duyi-study-exercises-title.container.duyi-dom-translate
 				p 水平测试套题
 				div
 					img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
 				p Drag for more
-			.duyi-study-exercises-content
+			.duyi-study-exercises-content.duyi-dom-translate
 				.duyi-study-exercises-scroll-wrapper
 					each item in exercises
 						.duyi-study-exercises-scroll-item
 							.duyi-study-exercises-scroll-img
 								img(src=`${item.img}`)
 							.duyi-study-exercises-scroll-info
-								p #{item.title}
-								div.duyi-study-exercises-describe
-									span #{item.describe}
-								div.duyi-study-exercises-star
-									each star in item.star
-										if star == 0
-											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/dark-star.png) no-repeat`)
-										else if star == 1
-											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/half-star.png) no-repeat`)
-										else
-											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/star.png) no-repeat`)
-		section.duyi-study-consult.section
-			.duyi-study-consult-title
+								a(href=`${item.link}`)
+									p #{item.title}
+									div.duyi-study-exercises-describe
+										span #{item.describe}
+									div.duyi-study-exercises-star
+										each star in item.star
+											if star == 0
+												span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/dark-star.png) no-repeat`)
+											else if star == 1
+												span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/half-star.png) no-repeat`)
+											else
+												span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/star.png) no-repeat`)
+		section.duyi-study-consult
+			.duyi-study-consult-title.container.duyi-dom-translate
 				p 咨询课程
+				p COUNSELING COURSES
 				span
-			.duyi-study-consult-way-row
+			.duyi-study-consult-way-row.duyi-dom-translate
 				.duyi-study-consult-way-item.duyi-study-consult-way-wechat
 					.duyi-study-consult-way-item-wrapper
 						.duyi-study-consult-way-wechat-photo
@@ -83,6 +101,5 @@ block content
 				.duyi-study-consult-way-item.duyi-study-consult-way-online
 					.duyi-study-consult-way-item-wrapper
 						.duyi-study-consult-way-online-photo
-						a(href="#").duyi-study-consult-way-online-a
+						a(href="http://wpa.qq.com/msgrd?v=3&uin=124797531&site=qq&menu=yes").duyi-study-consult-way-online-a
 					p Online
-			include includes/study-footer

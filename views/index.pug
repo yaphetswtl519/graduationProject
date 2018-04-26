@@ -22,14 +22,22 @@ block content
     
     section.duyi-student-show
       .duyi-student-title.container
-        h2 优秀学员俱乐部
+        p 优秀学员俱乐部
+        p 25w--45w年薪        
         span
-        h3 25w--45w年薪
-      .duyi-student-photo
-        each student, index in studentInfo
-          a.duyi-student-photo-img(href=`${student.imgUrl}`, data-info=`${JSON.stringify(student.info)}`)
-            img.duyi-student-photo-image(src=`${student.imgUrl}`)
-
+      .duyi-student-photo.tt-grid-wrapper
+        ul.tt-grid.tt-effect-frontrow.tt-effect-delay
+          each student, index in studentInfo
+            li(class={'duyi-student-photo-img-left': index % 4 === 0})
+              a.duyi-student-photo-img(href=`${student.imgUrl}`, data-info=`${JSON.stringify(student.info)}`)
+                img.duyi-student-photo-image(src=`${student.imgUrl}`)
+        nav
+          span
+            i.tt-current
+          span
+            i
+          span
+            i
     section.duyi-tencent
       .container.duyi-dom-translate
         .row
@@ -43,13 +51,13 @@ block content
               p 渡一科技教育公司成立于2007年，后经几轮兼并收购，成立渡一信息技术开发有限公司，下设渡一教育品牌。公司核心业务包含科技类外包，IT教育培训等业务。
               p 企业开展教育业务至今已有7年整，市场辐射已达整个哈尔滨市，是国内首家开设专业web前端培训的机构。
           .duyi-tencent-photo.col-md-6
-            img(src="")
+            img(src="http://p6alxlphh.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180425111139.png")
     
     section.duyi-teacher
       .duyi-teacher-title.container.duyi-dom-translate
         p 业界名师 卓尔不凡
+        p 来自互联网公司的大咖亲自授课，祝你圆梦IT        
         span
-        p 来自互联网公司的大咖亲自授课，祝你圆梦IT
       each teacher in teacherInfo
         .duyi-teacher-detail.duyi-dom-translate
           each item in teacher
@@ -67,6 +75,7 @@ block content
       .duyi-cooperation-title.container.duyi-dom-translate
         p 内推合作机构 助力学员就业
         p COOPERATION
+        span
       .duyi-cooperation-detail.duyi-dom-translate
         each cooperation, index in cooperationInfo
           if index % 4 === 0
@@ -75,8 +84,3 @@ block content
                 .duyi-cooperation-detail-img
                   img(src=`${cooperationInfo[index+count].lightImg}`).duyi-cooperation-img-light                
                   img(src=`${cooperationInfo[index+count].darkImg}`).duyi-cooperation-img-dark
-          
-
-            
-
-        

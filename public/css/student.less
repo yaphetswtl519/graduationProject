@@ -4,26 +4,21 @@
         margin-top: 340px;
         .duyi-student-employment-title {
             text-align: center;
-            color: #222;
+            color: #232323;
             p:nth-child(1) {
-                font-size: 50px;
-                margin-bottom: 30px;
-                font-family: PingFangH;
+                font-size: 40px;
+                margin-bottom: 5px;
             }
             span {
                 display: block;
-                margin: 0 auto 38px;
+                margin: 25px auto 0;
                 width: 20px;
                 height: 2px;
                 background: #be926f;
             }
+            p:nth-child(2),
             p:nth-child(3) {
-                margin-bottom: 0;
-            }
-            p:nth-child(3),
-            p:nth-child(4) {
-                font-family: PingFangM;
-                font-size: 24px;
+                font-size: 20px;
             }
             @keyframes arrowMove {
                 0% {
@@ -239,85 +234,126 @@
                 }
             }
         }
+        // .duyi-student-campus {
+        //     position: relative;
+        //     .duyi-student-campus-left {
+        //         width: 40%;
+        //         background-color: #e6e6e6;
+        //     }
+        //     .duyi-student-campus-right {
+        //         position: relative;
+        //         width: 60%;
+        //     }
+        //     .duyi-student-campus-wrapper {
+        //         position: absolute;
+        //         top: 142px;
+        //         width: 1300px;
+        //         left: 50%;
+        //         transform: translateX(-50%);
+        //         .duyi-student-campus-left-photo {
+        //             float: left;
+        //             overflow: hidden;
+        //             div {
+        //                 position: relative;
+        //                 img {
+        //                     width: 637px;
+        //                     transition: all .4s ease 0s;
+        //                 }
+        //                 p {
+        //                     display: inline-block;
+        //                     width: 80px;
+        //                     height: 110px;
+        //                     color: #fff;
+        //                     font-size: 40px;
+        //                     margin-bottom: 0;
+        //                     left: 120px;
+        //                     top: 120px;
+        //                     position: absolute;
+        //                 }
+        //                 span {
+        //                     display: block;
+        //                     position: absolute;
+        //                     width: 70%;
+        //                     height: 70%;
+        //                     border: 3px solid #fff;
+        //                     left: 50%;
+        //                     top: 50%;
+        //                     transform: translate(-50%, -50%);
+        //                 }
+        //             }
+        //         }
+        //         .duyi-student-campus-left-photo:hover img {
+        //             transform: scale(1.1);
+        //         }
+        //         .duyi-student-campus-right-photo {
+        //             float: right;
+        //             .duyi-student-campus-right-top {
+        //                 margin-bottom: 32px;
+        //                 overflow: hidden;
+        //                 img {   
+        //                     width: 633px;
+        //                     transition: all .4s ease 0s;
+        //                 }
+        //             }
+        //             .duyi-student-campus-right-top:hover img {
+        //                 transform: scale(1.1);
+        //             }
+        //             .duyi-student-campus-right-bottom {
+        //                 div{
+        //                     display: inline-block;
+        //                     overflow: hidden;                        
+        //                     img {
+        //                         width: 301px;
+        //                         transition: all .4s ease 0s;
+        //                     }
+        //                 }
+        //                 div:nth-child(2) {
+        //                     margin-left: 32px;
+        //                 }
+        //                 div:hover img {
+        //                     transform: scale(1.1);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         .duyi-student-campus {
-            position: relative;
-            .duyi-student-campus-left {
-                width: 40%;
-                background-color: #e6e6e6;
+            .duyi-student-campus-title {
+                color: #232323;
+                text-align: center;
+                p:nth-child(1) {
+                    font-size: 40px;
+                }
+                div {
+                    background: url(../images/handdrag-line.png) no-repeat 50% 0 / contain;
+                    width: 100%;
+                    height: 2px;
+                    margin: 40px 0 35px;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        width: 32px;
+                        height: 34px;
+                        top: -15px;
+                        animation: handMove 4s linear infinite both;
+                    }
+                }
+                p:nth-child(3) {
+                    font-size: 20px;
+                }
             }
-            .duyi-student-campus-right {
+            .duyi-student-campus-content {
                 position: relative;
-                width: 60%;
-            }
-            .duyi-student-campus-wrapper {
-                position: absolute;
-                top: 142px;
-                width: 1300px;
-                left: 50%;
-                transform: translateX(-50%);
-                .duyi-student-campus-left-photo {
-                    float: left;
-                    overflow: hidden;
-                    div {
-                        position: relative;
-                        img {
-                            width: 637px;
-                            transition: all .4s ease 0s;
-                        }
-                        p {
-                            display: inline-block;
-                            width: 80px;
-                            height: 110px;
-                            color: #fff;
-                            font-size: 40px;
-                            margin-bottom: 0;
-                            left: 120px;
-                            top: 120px;
-                            position: absolute;
-                        }
-                        span {
-                            display: block;
-                            position: absolute;
-                            width: 70%;
-                            height: 70%;
-                            border: 3px solid #fff;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
-                        }
-                    }
-                }
-                .duyi-student-campus-left-photo:hover img {
-                    transform: scale(1.1);
-                }
-                .duyi-student-campus-right-photo {
-                    float: right;
-                    .duyi-student-campus-right-top {
-                        margin-bottom: 32px;
-                        overflow: hidden;
-                        img {   
-                            width: 633px;
-                            transition: all .4s ease 0s;
-                        }
-                    }
-                    .duyi-student-campus-right-top:hover img {
-                        transform: scale(1.1);
-                    }
-                    .duyi-student-campus-right-bottom {
-                        div{
-                            display: inline-block;
-                            overflow: hidden;                        
-                            img {
-                                width: 301px;
-                                transition: all .4s ease 0s;
-                            }
-                        }
-                        div:nth-child(2) {
-                            margin-left: 32px;
-                        }
-                        div:hover img {
-                            transform: scale(1.1);
-                        }
+                overflow: hidden;
+                padding-left: 117px;
+                cursor: pointer;
+                .duyi-student-campus-scroll-wrapper {
+                    white-space: nowrap;
+                    position: relative;
+                    width: 6485px;
+                    .duyi-student-campus-scroll-item {
+                        display: inline-block;
+                        margin-right: 50px;
                     }
                 }
             }

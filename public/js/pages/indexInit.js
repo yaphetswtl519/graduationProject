@@ -1,7 +1,7 @@
 import PhotoApp from '../imageShow.js';
 import PosterMove from '../posterMove.js';
 import '../includes/jquery-rebox';
-
+import slideInit from '../includes/studentEffects';
 export default function () {
     let $teacherWrapper = $('.duyi-teacher-wrapper'),
         teacherBoxOffset = [0, 281, -380, -100, -304, -24];
@@ -15,7 +15,8 @@ export default function () {
             speed: 79
         }, $(item));
     });
-
+    
+    slideInit();
     // 图片放大
     // new PhotoApp();
     $('.duyi-student-photo').rebox({ selector: 'a' })    

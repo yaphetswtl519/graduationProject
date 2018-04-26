@@ -22,8 +22,8 @@ router.get('/study', (req, res, next) => {
   fs.readFile('public/json/study.json', 'utf8', (err, studyData) =>{
     if (err) throw err;
     studyData = JSON.parse(studyData);
-    let page = /Android|webOS|iPhone|iPod|BlackBerry/i.test(ua) ? 'studymobile' : 'study';
-    res.render(page, {
+    // let page = /Android|webOS|iPhone|iPod|BlackBerry/i.test(ua) ? 'studymobile' : 'study';
+    res.render('study', {
       title: 'DUYI',
       lessons: studyData.lessons,
       exercises: studyData.exercises
@@ -40,7 +40,8 @@ router.get('/student', (req, res, next) => {
       title: 'DUYI',
       employmentList: studentData.employmentList,
       activityList: studentData.activityList,
-      productionList: studentData.productionList
+      productionList: studentData.productionList,
+      campusList: studentData.campusList
     });
   });
 });

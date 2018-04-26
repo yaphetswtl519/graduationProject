@@ -5,9 +5,9 @@ block content
         section.duyi-student-employment
             .duyi-student-employment-title.container
                 p 学员就业榜
-                span
                 p Student Employment list
                 p sdadadiajdsajdijaidjoaj
+                span                
                 .duyi-student-employment-arrow
             .duyi-student-employment-content
                 .duyi-student-employment-content-wrapper
@@ -28,8 +28,8 @@ block content
 
         section.duyi-student-describe
             .duyi-student-story.duyi-student-describe-item
-                .duyi-student-story-left.duyi-student-describe-item-left
-                .duyi-student-story-right.duyi-student-describe-item-right
+                //- .duyi-student-story-left.duyi-student-describe-item-left
+                //- .duyi-student-story-right.duyi-student-describe-item-right
                 .duyi-student-story-wrapper.duyi-dom-translate
                     .duyi-student-story-left-video
                         video.duyi-student-story-video(src="http://p6alxlphh.bkt.clouddn.com/video/video.mp4", poster="http://p6alxlphh.bkt.clouddn.com/video/poster.jpg")
@@ -43,56 +43,67 @@ block content
                             p.duyi-dom-translate 学员故事
                             p.duyi-dom-translate 可是大卡的卡卡道口都卡送到考考懂啊空洞阿康soda口袋考考懂啊咳嗽得靠
                     
-            .duyi-student-campus.duyi-student-describe-item
-                .duyi-student-campus-left.duyi-student-describe-item-left
-                .duyi-student-campus-right.duyi-student-describe-item-right
-                .duyi-student-campus-wrapper
-                    .duyi-student-campus-left-photo.duyi-dom-translate
-                        div
-                            img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus1.png")
-                            p 校园环境
-                            span
-                    .duyi-student-campus-right-photo
-                        .duyi-student-campus-right-top.duyi-dom-translate
-                            img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus2.png")
-                        .duyi-student-campus-right-bottom.duyi-dom-translate
-                            div
-                                img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus3.png")
-                            div
-                                img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus4.png")
-            .duyi-student-activity.duyi-student-describe-item
-                .duyi-student-activity-left.duyi-student-describe-item-left
-                .duyi-student-activity-right.duyi-student-describe-item-right
-                ul.duyi-student-activity-ul
-                    each activity, index in activityList
-                        li(class={'duyi-student-activity-active': index === 0})
-                #duyi-student-activity-wrapper
-                    each activity, index in activityList
-                        .duyi-student-activity-item(style={display: index === 0 ? 'block' : 'none'})
-                            .duyi-student-activity-photo
-                                img(src=`${activity.img}`)
-                            .duyi-student-activity-right-wrapper
-                                .duyi-student-activity-right-top #{activity.top}
-                                .duyi-student-activity-right-bottom
-                                    p #{activity.bottom}
+            //- .duyi-student-campus.duyi-student-describe-item
+            //-     .duyi-student-campus-left.duyi-student-describe-item-left
+            //-     .duyi-student-campus-right.duyi-student-describe-item-right
+            //-     .duyi-student-campus-wrapper
+            //-         .duyi-student-campus-left-photo.duyi-dom-translate
+            //-             div
+            //-                 img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus1.png")
+            //-                 p 校园环境
+            //-                 span
+            //-         .duyi-student-campus-right-photo
+            //-             .duyi-student-campus-right-top.duyi-dom-translate
+            //-                 img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus2.png")
+            //-             .duyi-student-campus-right-bottom.duyi-dom-translate
+            //-                 div
+            //-                     img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus3.png")
+            //-                 div
+            //-                     img(src="http://p6alxlphh.bkt.clouddn.com/campus/campus4.png")
+            .duyi-student-campus
+                .duyi-student-campus-title.duyi-dom-translate
+                    p 校园环境
+                    div
+                        img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
+                    p CAMPUS ENVIROMENT
+                .duyi-student-campus-content.duyi-dom-translate
+                    .duyi-student-campus-scroll-wrapper
+                        each campus in campusList
+                            .duyi-student-campus-scroll-item
+                                img(src=`${campus}`)
+        //-     .duyi-student-activity.duyi-student-describe-item
+        //-         .duyi-student-activity-left.duyi-student-describe-item-left
+        //-         .duyi-student-activity-right.duyi-student-describe-item-right
+        //-         ul.duyi-student-activity-ul
+        //-             each activity, index in activityList
+        //-                 li(class={'duyi-student-activity-active': index === 0})
+        //-         #duyi-student-activity-wrapper
+        //-             each activity, index in activityList
+        //-                 .duyi-student-activity-item(style={display: index === 0 ? 'block' : 'none'})
+        //-                     .duyi-student-activity-photo
+        //-                         img(src=`${activity.img}`)
+        //-                     .duyi-student-activity-right-wrapper
+        //-                         .duyi-student-activity-right-top #{activity.top}
+        //-                         .duyi-student-activity-right-bottom
+        //-                             p #{activity.bottom}
 
-        section.duyi-student-production
-            .duyi-student-production-wrapper
-                #duyi-student-production-ps-wrapper
-                    each production, index in productionList 
-                        .duyi-student-production-row(style={display: index === 0 ? 'block' : 'none'})
-                            .duyi-student-production-left
-                                img(src=`${production.img}`)
-                            .duyi-student-production-right
-                                p.duyi-student-production-right-title #{production.title}
-                                div.duyi-dom-translate
-                                    p.duyi-student-production-p-fir #{production.fir}
-                                    p.duyi-student-production-p-sec #{production.sec}
-                .duyi-student-production-dial.duyi-dom-translate
-                    .duyi-student-production-dial-wrapper
-                        div
-                        span.duyi-student-production-black-line
-                        span.duyi-student-production-hand
-                            img(src="http://p6alxlphh.bkt.clouddn.com/icon-hand.png")
-                        i.duyi-student-production-tri-top
-                        i.duyi-student-production-tri-bottom
+        //- section.duyi-student-production
+        //-     .duyi-student-production-wrapper
+        //-         #duyi-student-production-ps-wrapper
+        //-             each production, index in productionList 
+        //-                 .duyi-student-production-row(style={display: index === 0 ? 'block' : 'none'})
+        //-                     .duyi-student-production-left
+        //-                         img(src=`${production.img}`)
+        //-                     .duyi-student-production-right
+        //-                         p.duyi-student-production-right-title #{production.title}
+        //-                         div.duyi-dom-translate
+        //-                             p.duyi-student-production-p-fir #{production.fir}
+        //-                             p.duyi-student-production-p-sec #{production.sec}
+        //-         .duyi-student-production-dial.duyi-dom-translate
+        //-             .duyi-student-production-dial-wrapper
+        //-                 div
+        //-                 span.duyi-student-production-black-line
+        //-                 span.duyi-student-production-hand
+        //-                     img(src="http://p6alxlphh.bkt.clouddn.com/icon-hand.png")
+        //-                 i.duyi-student-production-tri-top
+        //-                 i.duyi-student-production-tri-bottom
