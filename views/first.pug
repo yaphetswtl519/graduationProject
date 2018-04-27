@@ -1,0 +1,90 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title= title
+    script(src="../../cssIndex.js")
+  body
+    include includes/header
+    
+    .blog-wrapper.clearfix.container
+        .content.col-sm-12.col-md-8.col-lg-8
+            each item in essays
+                .blog-detail-item
+                    .item-tag.row
+                        a(href=`/essay/${item._id}`).item-link
+                            p.col-md-12 #{item.title}
+                    .item-content.row
+                        .col-md-5.col-lg-5.col-sm-5.hidden-xs.article-theme
+                            a(href=`/essay/${item._id}`)
+                                img(src=item.poster)
+                        .col-md-7.col-lg-7.col-sm-7.col-xs-12.article-summary #{item.content}
+                    .item-foot.row
+                        .article-date.col-md-3.col-lg-3.col-sm-3.col-xs-3
+                            img(src="http://p7u4khtgt.bkt.clouddn.com/date.svg")
+                            span #{item.createAt}
+                        .article-author.col-md-1.col-lg-1.col-sm-1.hidden-xs
+                            span #{item.author}
+                        .article-browse.col-md-3.col-lg-3.col-sm-3.hidden-xs
+                            img(src="http://p7u4khtgt.bkt.clouddn.com/view.svg")
+                            span #{item.view}
+                        .article-detail.col-md-5.col-lg-5.col-xs-5.col-sm-5
+                            a(href=`/essay/${item._id}`)
+                                span 阅读全文 >>
+            nav
+                ul.pager
+                    if +page != 1
+                        - let pagePre = (+page) - 1
+                            li.previous
+                                a(href=`/page?p=${pagePre}`) 
+                                    span &larr;
+                                    span Previous
+                    if +page < +pageSize
+                        - let pageNext = (+page) + 1;
+                            li.next
+                                a(href=`/page?p=${pageNext}`)
+                                    span next
+                                    span &rarr;
+        
+        .msg.col-md-4.col-lg-4.hidden-sm.hidden-xs
+            .msg-head
+                a(href="/")
+                    img.msg-head-icon(src="http://p7u4khtgt.bkt.clouddn.com/wtl.png")
+                p 王天立
+                hr
+                .msg-head-main Forever Yaphets Best
+                hr
+                nav
+                    .log 
+                        span #{count}
+                        span 文章
+                    .visiter
+                        span #{totalView}
+                        span 访客
+                    .tag 
+                        span 
+                        span 标签
+                hr
+                .icon           
+                    ul.icon-ul
+                        li
+                            a(href="https://github.com/yaphetswtl519")
+                                img(src="http://p7u4khtgt.bkt.clouddn.com/github.svg")
+                        li
+                            a(href="http://weibo.com/5524338761")
+                                img(src="http://p7u4khtgt.bkt.clouddn.com/blog.svg")
+                        li
+                            a(href="http://music.163.com/#/user/home?id=346180922")
+                                img(src="http://p7u4khtgt.bkt.clouddn.com/netease-music.svg")
+                        li.icon-wechat
+                            a(href="#")
+                                img(src="http://p7u4khtgt.bkt.clouddn.com/wechat.svg")
+                                .wechat-div
+                                    .wechat
+                                    .alipay
+                                    p 如果你觉得我很帅，可以加我微信或者通过捐赏支持我，哈哈~       
+
+    include includes/footer
+    script(src="../../index.js")

@@ -7,7 +7,8 @@ module.exports = {
     entry: {
         index: './public/js/index.js',
         cssIndex: './public/js/cssIndex.js',
-        studyCssIndex: './public/js/studyCssIndex.js'
+        loginCssIndex: './public/js/loginCssIndex.js',
+        'images/Starry.jpg': './public/images/Starry.jpg'
     },
     output: {
         path: path.resolve(process.cwd(), 'build/'),
@@ -19,7 +20,7 @@ module.exports = {
             jQuery: "jquery",
             "window.jQuery": "jquery"
         }),
-        new uglify()
+        // new uglify()
     ],
     module: {
         loaders: [

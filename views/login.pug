@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title= title
+    script(src="loginCssIndex.js")
+  body 
+    .login
+        .login_title
+            span 管理员登录
+        .login_fields
+            .login_fields__user
+                .icon
+                    img(src="http://p7u4khtgt.bkt.clouddn.com/login/user_icon_copy.png")
+                input(name="name", placeholder='用户名', maxlength="16", type='text', autocomplete="off")
+                .validation
+                    img(src="http://p7u4khtgt.bkt.clouddn.com/login/tick.png", alt="")
+            .login_fields__password
+                .icon
+                    img(src="http://p7u4khtgt.bkt.clouddn.com/login/lock_icon_copy.png")
+                input(name="password", placeholder='密码', maxlength="16", type='password', autocomplete="off")
+                .validation
+                    img(src="http://p7u4khtgt.bkt.clouddn.com/login/tick.png")
+            .login_fields__password
+                .icon
+                    img(src="http://p7u4khtgt.bkt.clouddn.com/login/key.png")
+                input(name="code", placeholder='验证码', maxlength="4", type='text', autocomplete="off")
+                .validation(style="opacity: 1; right: -5px;top: -3px;")
+                    <canvas class="J_codeimg" id="myCanvas">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+            .login_fields__submit
+                input(type="button", value="登录")
+        .success
+        .disclaimer
+            p 欢迎登陆管理系统
+                a(href="/") 回到首页
+
+    .authent
+        .loader(style="height: 44px;width: 44px;margin-left: 28px;")
+            .loader-inner.ball-clip-rotate-multiple
+                div
+                div
+                div
+        p 认证中...
+    .OverWindows
+    
+    script(src="index.js")
+      

@@ -4,63 +4,39 @@ block content
 	.duyi-content
 		section.duyi-study-poster
 			.duyi-study-poster-title.container
-				p 零基础教学
-				p 渡一百分百保证毕业学员就业年薪10w+，达不到全额退还学费
+				p Photo
+				p LOL、绝地求生
 				span
-			//- .duyi-study-poster-img-wrapper
-				img(src="http://p6alxlphh.bkt.clouddn.com/study-banner.png")
 		section.duyi-study-curriculum
 			.duyi-study-curriculum-web
 				.duyi-study-curriculum-web-title.duyi-study-curriculum-title
-					p 前端课程
+					p 绝地求生经典战斗
 					div
 						img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
-					p The front course
+					p PLAYERUNKNOWN'S BATTLEGROUNDS
 				.duyi-study-curriculum-web-content
 					.duyi-study-curriculum-web-scroll-wrapper
 						each lesson in lessons
 							.duyi-study-curriculum-web-scroll-item
 								.duyi-study-curriculum-web-scroll-img
 									img(src=`${lesson.img}`)
-								a(href=`${lesson.link}`)
-									.duyi-study-curriculum-web-scroll-info
-										p #{lesson.title}
-										div
-											span 讲师：#{lesson.teacher}
-											span 好评#{lesson.per}
-				//- .duyi-study-curriculum-web-detail-wrapper
-				//- 	each lesson, ind in lessons
-				//- 		ul.duyi-study-curriculum-web-detail(id=`webslide${ind}`)
-				//- 			each item, index in lesson
-				//- 				li
-				//- 					.duyi-study-curriculum-web-detail-img
-				//- 					p #{item.intro}
-				//- 					p
-				//- 						span.duyi-study-curriculum-author #{item.author}				
-
-			//- .duyi-study-curriculum-java
-			//- 	.duyi-study-curriculum-java-title.duyi-study-curriculum-title.container JAVA课程
-			//- 	.duyi-study-curriculum-java-detail-wrapper
-			//- 		each lesson, ind in lessons
-			//- 			ul.duyi-study-curriculum-java-detail(id=`javaslide${ind}`)
-			//- 				each item, index in lesson
-			//- 					li
-			//- 						.duyi-study-curriculum-java-detail-img(style="background-color: #bbb;")
-			//- 						p #{item.intro}
-			//- 						p
-			//- 							span.duyi-study-curriculum-author #{item.author}
+								.duyi-study-curriculum-web-scroll-info
+									p #{lesson.title}
+									div
+										span #{lesson.teacher}
+										span 日期 #{lesson.per}
 			.duyi-study-curriculum-java.duyi-dom-translate
 				p UPDATING
-				P JAVA课程
+				P NBA2K18
 				p 敬请期待
 								
 
 		section.duyi-study-exercises
 			.duyi-study-exercises-title.container.duyi-dom-translate
-				p 水平测试套题
+				p 英雄联盟5杀
 				div
 					img(src="http://p6alxlphh.bkt.clouddn.com/hand.png")
-				p Drag for more
+				p LOL
 			.duyi-study-exercises-content.duyi-dom-translate
 				.duyi-study-exercises-scroll-wrapper
 					each item in exercises
@@ -68,22 +44,21 @@ block content
 							.duyi-study-exercises-scroll-img
 								img(src=`${item.img}`)
 							.duyi-study-exercises-scroll-info
-								a(href=`${item.link}`)
-									p #{item.title}
-									div.duyi-study-exercises-describe
-										span #{item.describe}
-									div.duyi-study-exercises-star
-										each star in item.star
-											if star == 0
-												span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/dark-star.png) no-repeat`)
-											else if star == 1
-												span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/half-star.png) no-repeat`)
-											else
-												span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/star.png) no-repeat`)
+								p #{item.title}
+								div.duyi-study-exercises-describe
+									span #{item.describe}
+								div.duyi-study-exercises-star
+									each star in item.star
+										if star == 0
+											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/dark-star.png) no-repeat`)
+										else if star == 1
+											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/half-star.png) no-repeat`)
+										else
+											span(style=`background:url(http://p6alxlphh.bkt.clouddn.com/star.png) no-repeat`)
 		section.duyi-study-consult
 			.duyi-study-consult-title.container.duyi-dom-translate
-				p 咨询课程
-				p COUNSELING COURSES
+				p 联系我
+				p CONTACT ME
 				span
 			.duyi-study-consult-way-row.duyi-dom-translate
 				.duyi-study-consult-way-item.duyi-study-consult-way-wechat
@@ -95,11 +70,11 @@ block content
 					.duyi-study-consult-way-item-wrapper
 						.duyi-study-consult-way-phone-photo
 						.duyi-study-consult-way-phone-number
-							p +86 123 4563 7896
-							p +86 173 4523 7556
+							p +86 13206682870
+							p +86 13021370337
 					p Phone
 				.duyi-study-consult-way-item.duyi-study-consult-way-online
 					.duyi-study-consult-way-item-wrapper
 						.duyi-study-consult-way-online-photo
-						a(href="http://wpa.qq.com/msgrd?v=3&uin=124797531&site=qq&menu=yes").duyi-study-consult-way-online-a
-					p Online
+						a(href="http://wpa.qq.com/msgrd?v=3&uin=1101544275&site=qq&menu=yes").duyi-study-consult-way-online-a 联系我
+					p QQ
